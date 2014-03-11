@@ -1,0 +1,104 @@
+<?php
+
+App::uses('AppController', 'Controller');
+
+class ValidaController extends AppController {
+
+  public $uses = array('HashTable','Validacion');
+
+  public function index() {
+    header("Content-type: application/json");
+  
+    $nextImg = $this->HashTable->find(
+      'first',
+      array(
+	'conditions' => array('HashTable.hash IS NULL'),
+	'order' => 'RAND()'
+      )
+    );
+    
+    // Cleanup table & get another image
+    if(empty($nextImg)) {
+      $this->HashTable->query("UPDATE hash_table SET hash=NULL, valid_until=NULL");
+      $nextImg = $this->HashTable->find(
+	'first',
+	array(
+	  'conditions' => array('HashTable.hash IS NULL'),
+	  'order' => 'RAND()'
+	)
+      );
+    }
+    // Generate token
+    $expireDate = date("Y-m-d H:i:s",time()+60*5);
+    $nextImg['HashTable']['valid_until'] = $expireDate;
+    $nextImg['HashTable']['hash'] = sha1($nextImg['HashTable']['id'].$nextImg['HashTable']['partido'].$expireDate);
+    
+    // TO DO: Check for collisions
+    
+    $this->HashTable->id = $nextImg['HashTable']['id'];
+    
+    if($this->HashTable->save($nextImg)) {
+      echo json_encode(array("token"=>$nextImg['HashTable']['hash']));
+    } else {
+      echo json_encode(array("Error"=>"Cannot generate token"));
+    }
+    exit();
+  }
+  
+  public function image($hash) {
+    $img = $this->HashTable->findByHash($hash);
+    if(empty($img)) {
+      throw new NotFoundException();
+      return;
+    }
+    
+    header("Content-type: image/jpg");
+    //file_get_contents("./files/actaspng/".$img['HashTable']['acta_id']."v".$img['HashTable']['partido'].".png");*/
+    echo file_get_contents("./files/actasjpg/1va.jpg");
+    exit();
+  }
+  
+  public function conteo() {
+    if(isset($_POST['token'])&&isset($_POST['value'])&&is_numeric($_POST['value'])) {
+      $data = $this->HashTable->find(
+	'first',
+	array(
+	  'conditions' => array(
+	    'AND' => array(
+	      'HashTable.hash' => $_POST['token'],
+	      'HashTable.valid_until > NOW()'
+	      )
+	    )
+	)
+      );
+      if(!empty($data)) {
+	$votos = intval($_POST['value']);
+	if($votos>=0 && $votos<=500) {
+	  $validacion = array(
+	    'Validacion' => array(
+	      'acta_id' => $data['HashTable']['acta_id'],
+	      'partido' => $data['HashTable']['partido'],
+	      'digitado' => $_POST['value'],
+	      'fecha' => date("Y-m-d H:i:s"),
+	      'origin' => $_SERVER['REMOTE_ADDR']
+	    )
+	  );
+	  if($this->Validacion->save($validacion)) {
+	    // Clear 
+	    $this->HashTable->query("UPDATE hash_table SET hash=NULL, valid_until=NULL WHERE id=".$data['HashTable']['id']);
+	    echo json_encode(array("Status"=>"OK"));
+	  } else {
+	  echo json_encode(array("Error"=>"Cannot save data."));
+	  }
+	} else {
+	  echo json_encode(array("Error"=>"Invalid range for value."));
+	}
+      } else {
+      echo json_encode(array("Error"=>"Invalid or expired token."));
+      }
+    } else {
+      echo json_encode(array("Error"=>"Invalid token or value."));
+    }
+    exit();
+  }
+}
