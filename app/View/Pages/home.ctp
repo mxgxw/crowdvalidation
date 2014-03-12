@@ -6,7 +6,7 @@
             <h2 styel = "color:#fff; text-align: center;">Instrucciones</h2>
             <p>Digite los Numeros que en la imagen se presentan en el cuadro de texto y luego presiones Enviar Acta</p>
           </div>       
-          <div id = "alert-box" class=" col-sm-10 col-sm-offset-1 alert alert-success fade in">
+          <div id = "alert-box" class=" col-sm-10 col-sm-offset-1 alert alert-success fade in" style = "display:none;margin-bottom: -32px;">
             <button type="button" id = "alert-close-btn" class="close ">×</button>
             <center><strong>Captcha Recibido!!!</strong></center>
           </div>
