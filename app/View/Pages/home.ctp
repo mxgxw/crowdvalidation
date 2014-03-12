@@ -4,7 +4,7 @@
             <h1>Conteo electoral 2014</h1>
             <p>Desarrollo de herramienta crowd-sourced, totalmente anónima, capaz de verificar los conteos que se encuentran en las actas de las Juntas Electorales Enviadas al TSE</p>
             <h2 styel = "color:#fff; text-align: center;">Instrucciones</h2>
-            <p>Digite los Numeros que en la imagen se presentan en el cuadro de texto y luego presiones Enviar Acta</p>
+            <p>Digite los Numeros que en la imagen se presentan en el cuadro de texto y luego presiona "Enviar Acta" o la tecla [Enter].</p>
           </div>       
           <div id = "alert-box" class=" col-sm-10 col-sm-offset-1 alert alert-success fade in" style = "display:none;margin-bottom: -32px;">
             <button type="button" id = "alert-close-btn" class="close ">×</button>
