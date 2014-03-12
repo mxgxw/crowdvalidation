@@ -22,10 +22,7 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 <html lang="en">
   <head>
     <?php echo $this->Html->charset(); ?>
-    <title>
-	    <?php echo $cakeDescription ?>:
-	    <?php echo $title_for_layout; ?>
-    </title>
+    <title>Conteo Participativo Elecciones 2014</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <?php
