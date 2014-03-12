@@ -127,6 +127,8 @@ $(function () {
     counter = $("#txtCounter").val();
     if(counter.indexOf("-")>=0 || counter.indexOf("_")>=0){
       window.alert("No ingrese guiones");
+      $("#btnSend").removeAttr("disabled");
+      $("#btnSend").text("Enviar Acta");
       return
     }
     sendResult();imgContainer
