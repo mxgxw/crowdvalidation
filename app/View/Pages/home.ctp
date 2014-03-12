@@ -1,24 +1,43 @@
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script type="text/javascript">
 var token = 0;
-$(function () {
-  $('#getNew').click(function () {
-    $.ajax({
-      url: "/valida/",
-    }).done(function( data ) {
-      token = data.token;
-      $('#imgContainer').html('<img src="/valida/image/'+token+'"/>');
-    })
-  });
-  $('#btnSend').click(function () {
+function loadNew() {
+  $.ajax({
+    url: "./valida/",
+  }).done(function( data ) {
+    token = data.token;
+    $('#imgContainer').html('<img src="./valida/image/'+token+'"/>');
+    $('#txtCounter').val("");
+  })
+}
+function sendResult() {
     if(token!=0) {
       $.ajax({
-	url: "/valida/conteo/",
-	type: 'POST',
-	data: { token: token, value: $('#txtCounter').val() }
+        url: "./valida/conteo/",
+        type: 'POST',
+        data: { token: token, value: $('#txtCounter').val() }
       }).done(function( data ) {
-	window.alert("Datos enviados");
+        if(data.Status) {
+          window.alert("Captcha recibido");
+          $('#txtCounter').val("");
+          loadNew();
+        }
+        if(data.Error) {
+          window.alert("Error: "+data.Error);
+        }
       })
+    }
+}
+$(function () {
+  $('#getNew').click(function () {
+    loadNew();
+  });
+  $('#btnSend').click(function () {
+    sendResult();
+  });
+  $(document).keypress(function(e) {
+    if(e.which == 13) {
+      sendResult();
     }
   });
 });

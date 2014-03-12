@@ -53,12 +53,13 @@ class ValidaController extends AppController {
     }
     
     header("Content-type: image/jpg");
-    //file_get_contents("./files/actaspng/".$img['HashTable']['acta_id']."v".$img['HashTable']['partido'].".png");*/
-    echo file_get_contents("./files/actasjpg/1va.jpg");
+    echo file_get_contents("./files/actas/".sprintf("%05d",$img['HashTable']['acta_id'])."_".(($img['HashTable']['partido']=='f') ? 'fm' : 'ar').".png");
+    // echo file_get_contents("./files/actasjpg/1va.jpg");
     exit();
   }
   
   public function conteo() {
+    header("Content-Type: application/json");
     if(isset($_POST['token'])&&isset($_POST['value'])&&is_numeric($_POST['value'])) {
       $data = $this->HashTable->find(
 	'first',
@@ -85,7 +86,7 @@ class ValidaController extends AppController {
 	  );
 	  if($this->Validacion->save($validacion)) {
 	    // Clear 
-	    $this->HashTable->query("UPDATE hash_table SET hash=NULL, valid_until=NULL WHERE id=".$data['HashTable']['id']);
+	    $this->HashTable->query("UPDATE hash_table SET valid_until=NULL WHERE id=".$data['HashTable']['id']);
 	    echo json_encode(array("Status"=>"OK"));
 	  } else {
 	  echo json_encode(array("Error"=>"Cannot save data."));
