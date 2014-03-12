@@ -23,8 +23,7 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
   <head>
     <?php echo $this->Html->charset(); ?>
     <title>
-	    <?php echo $cakeDescription ?>:
-	    <?php echo $title_for_layout; ?>
+	    Contemos Nosotros Web App para validar actas de votacion
     </title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -50,6 +49,10 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 
   </head>
   <body>
+      <div id = "alert-box" class="alert alert-success fade in" style = "display:none;">
+        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+        <strong>Captcha Recibido!!!</strong>
+      </div>
       <div class="row">
         <nav class="navbar navbar-inverse" role="navigation">
           <div class="container">
@@ -104,18 +107,28 @@ function sendResult() {
         data: { token: token, value: $('#txtCounter').val() }
       }).done(function( data ) {
         if(data.Status) {
-          window.alert("Captcha recibido");
+          $("#alert-box").show()
           $('#txtCounter').val("");
           loadNew();
         }
         if(data.Error) {
           window.alert("Error: "+data.Error);
         }
+        $("#btnSend").removeAttr("disabled");
+        $("#btnSend").text("Enviar Acta")
       })
     }
 }
 $(function () {
   $('#btnSend').click(function () {
+    $("#btnSend").attr("disabled", "disabled");
+    $("#btnSend").text("Enviando Acta....")
+    $("#alert-box").hide()
+    counter = $("#txtCounter").val();
+    if(counter.indexOf("-")>=0 || counter.indexOf("_")>=0){
+      window.alert("No ingrese guiones");
+      return
+    }
     sendResult();imgContainer
   });
   $(document).keypress(function(e) {
