@@ -49,10 +49,6 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 
   </head>
   <body>
-      <div id = "alert-box" class="alert alert-success fade in" style = "display:none;">
-        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-        <strong>Captcha Recibido!!!</strong>
-      </div>
       <div class="row">
         <nav class="navbar navbar-inverse" role="navigation">
           <div class="container">
@@ -79,7 +75,6 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
           </div>
         </nav>
       </div>
-
       <div class="container info">
 	<?php echo $this->Session->flash(); ?>
 	<?php echo $this->fetch('content'); ?>
@@ -108,6 +103,9 @@ function sendResult() {
       }).done(function( data ) {
         if(data.Status) {
           $("#alert-box").show()
+          window.setTimeout(function () {
+            $("#alert-box").hide();
+          }, 3000);
           $('#txtCounter').val("");
           loadNew();
         }
@@ -120,10 +118,12 @@ function sendResult() {
     }
 }
 $(function () {
+  $("#alert-close-btn").on("click", function(){
+    $("#alert-box").hide();
+  });
   $('#btnSend').click(function () {
     $("#btnSend").attr("disabled", "disabled");
     $("#btnSend").text("Enviando Acta....")
-    $("#alert-box").hide()
     counter = $("#txtCounter").val();
     if(counter.indexOf("-")>=0 || counter.indexOf("_")>=0){
       window.alert("No ingrese guiones");
