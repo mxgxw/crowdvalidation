@@ -1,4 +1,3 @@
-
         <div class="row"> <div class="col-sm-10 col-sm-offset-1">      
 <h1>Manifiesto</h1>
 <p> Como trasfondo de este pequeño experimento, los colaboradores y las personas que han hecho posible este &quot;Conteo de votos CrowdSourcing&quot; manifiestan lo siguiente:</p>
@@ -15,7 +14,7 @@
 <p>El código fuente de la aplicación está disponible para todo aquel que lo quiera revisar a través de la siguiente dirección:</p>
 <p><a href="https://github.com/mxgxw/crowdvalidation" target="_blank">https://github.com/mxgxw/crowdvalidation</a></p>
 
-<p>El código fuente de la aplicación con la que se recortaron los votos de las actas publicas del TSE para evitar que los digitadores supieron a que partido pertenencen y hacer mas imparcial el proceso de conteo:</p>
+<p>El código fuente de la aplicación con la que se recortaron los votos de las actas publicas del TSE para evitar que los digitadores supieran a que partido pertenecen y hacer mas imparcial el proceso de conteo:</p>
 <p><a href="https://gist.github.com/hkadejo/9522141" target="_blank">https://gist.github.com/hkadejo/9522141
 </a></p>
 <p>Adicionalmente se publican los <em>&quot;dump&quot;</em> de bases de datos del sistema, estos son archivos que contienen copias &quot;integras&quot; de los datos recolectados a través de la plataforma desde que inició su funcionamiento a través de la siguiente dirección:</p>
