@@ -18,10 +18,15 @@
 
 $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework');
 ?>
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <?php echo $this->Html->charset(); ?>
+<!doctype html>
+<!--[if lt IE 7]> <html class="ie6 oldie"> <![endif]-->
+<!--[if IE 7]>    <html class="ie7 oldie"> <![endif]-->
+<!--[if IE 8]>    <html class="ie8 oldie"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html>
+<!--<![endif]-->
+<head>
+	    <?php echo $this->Html->charset(); ?>
     <title>
 	    Contemos Nosotros Web App para validar actas de votacion
     </title>
@@ -37,8 +42,8 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 	    echo $this->fetch('script');
     ?>
     <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/style.css" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
