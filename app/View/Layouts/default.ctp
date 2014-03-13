@@ -71,9 +71,10 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 
               <div class="collapse navbar-collapse  pull-right" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                  <li class="active"><a href="#">Inicio</a></li>
+                   <li class="active"><a href="http://contemosnosotros.org/">Inicio</a></li>
                   <li><a href="#">Resultados</a></li>
-                  <li><a href="#">Acerca de Nosotros</a></li>
+                  <li><a href="pages/faq">FAQ</a></li>
+                  <li><a href="pages/acercade">Acerca de Nosotros</a></li>
                 </ul>                  
               </div>
             </div>
