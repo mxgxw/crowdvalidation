@@ -51,7 +51,8 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
   </head>
   <body>
       <div class="row">
@@ -66,14 +67,15 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
                   <span class="icon-bar"></span>
                   <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">Elecciones 2014</a>
+                <a class="navbar-brand" href="http://contemosnosotros.org/">Elecciones 2014</a>
               </div>
 
               <div class="collapse navbar-collapse  pull-right" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                  <li class="active"><a href="#">Inicio</a></li>
-                  <li><a href="#">Resultados</a></li>
-                  <li><a href="#">Acerca de Nosotros</a></li>
+                  <li class="active"><a href="http://contemosnosotros.org/">Inicio</a></li>
+                  <li><a href="http://contemosnosotros.org/pages/resultados">Resultados</a></li>
+                  <li><a href="http://contemosnosotros.org/pages/faq">FAQ</a></li>
+                  <li><a href="http://contemosnosotros.org/pages/acercade">Acerca de Nosotros</a></li>
                 </ul>                  
               </div>
             </div>
@@ -84,8 +86,7 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 	<?php echo $this->Session->flash(); ?>
 	<?php echo $this->fetch('content'); ?>
       </div>
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
 <script type="text/javascript">

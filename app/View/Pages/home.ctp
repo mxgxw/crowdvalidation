@@ -7,7 +7,7 @@
           </div>       
           <div id = "alert-box" class=" col-sm-10 col-sm-offset-1 alert alert-success fade in" style = "display:none;margin-bottom: -32px;">
             <button type="button" id = "alert-close-btn" class="close ">×</button>
-            <center><strong>Captcha Recibido!!!</strong></center>
+            <center><strong>Acta Ingresada!!!</strong></center>
           </div>
         </div>
 
@@ -28,7 +28,7 @@
 
             <div class="row inputt">
               <div class="centrado">
-                <input type="text" placeholder="Digitar números de acta" id="txtCounter" autofocus>
+               	<input type="text" placeholder="Digitar números de acta" id="txtCounter" autofocus="" maxlength="3">
               </div>             
                
               <div class="centrado"> <button class="btn btn-danger btn-lg" id="btnSend">Enviar Acta</button>
@@ -37,3 +37,13 @@
           </div>
 
         </div>
+		<script>
+    $( document ).ready(function() {
+$("#txtCounter").focusin(function() {
+  $( this ).attr("placeholder","");
+}).focusout(function(){
+  $( this ).attr("placeholder","Digitar números de acta");
+});
+
+ });
+    </script>

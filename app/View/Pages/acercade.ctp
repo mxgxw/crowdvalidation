@@ -1,5 +1,5 @@
 
-        <div class="row">       
+        <div class="row"> <div class="col-sm-10 col-sm-offset-1">      
 <h1>Manifiesto</h1>
 <p> Como trasfondo de este pequeño experimento, los colaboradores y las personas que han hecho posible este &quot;Conteo de votos CrowdSourcing&quot; manifiestan lo siguiente:</p>
 <p> En el marco de las elecciones presidenciales de El Salvador realizadas este pasado 9 de Marzo <strong>#EleccionesSV</strong>. Surgió una idea con propósitos meramente educativos: Desarrollar una aplicación que permitiera a los usuarios realizar el conteo de los votos de manera totalmente independiente e imparcial y anónima.</p>
@@ -13,9 +13,13 @@
 <p>La plataforma toma medidas especiales para prevenir lo anterior mostrando los conteos en papel al azar y sin mostrar a qué partido pertenencen. De esta manera un usuario mal intencionado no tiene forma de saber si el valor que va a &quot;inflar&quot; o &quot;reducir&quot; pertenece al partido de su predilección o no.</p>
 <p>La hipótesis que se espera validar al finalizar este ejercicio es que será un mayor porcentaje de usuarios que ingresen digitaciones correctas a los que ingresen digitaciones incorrectas, verificandose cada acta mediante un proceso totalmente anónimo, imparcial y basado en la &quot;sabiduría de las mayorías&quot;</p>
 <p>El código fuente de la aplicación está disponible para todo aquel que lo quiera revisar a través de la siguiente dirección:</p>
-<p><a href="https://github.com/mxgxw/crowdvalidation">https://github.com/mxgxw/crowdvalidation</a></p>
+<p><a href="https://github.com/mxgxw/crowdvalidation" target="_blank">https://github.com/mxgxw/crowdvalidation</a></p>
+
+<p>El código fuente de la aplicación con la que se recortaron los votos de las actas publicas del TSE para evitar que los digitadores supieron a que partido pertenencen y hacer mas imparcial el proceso de conteo:</p>
+<p><a href="https://gist.github.com/hkadejo/9522141" target="_blank">https://gist.github.com/hkadejo/9522141
+</a></p>
 <p>Adicionalmente se publican los <em>&quot;dump&quot;</em> de bases de datos del sistema, estos son archivos que contienen copias &quot;integras&quot; de los datos recolectados a través de la plataforma desde que inició su funcionamiento a través de la siguiente dirección:</p>
 <p><a href="http://contemosnosotros.org/app/webroot/sqldumps/">http://contemosnosotros.org/app/webroot/sqldumps/</a></p>
 <p>Esperamos que esta herramienta sea útil y agradecemos de antemano a todos los que colaboraron en cualquier medida con el desarrollo de la misma.</p>
 
-        </div>
+       </div> </div>
