@@ -262,6 +262,20 @@ $( function() {
         <strong>Número de IP públicas únicas participantes: </strong> <span id="statIP"></span><br />
         <strong>Número total de digitaciones:</strong> <span id="statDig"></span>
       </p;>
-
+      <h1>¿Qué es lo que sigue?</h1>
+      <p>Hasta el momento de la publicación del resultado aún hay muchas actas que no se han logrado verificar por completo, en muchos casos
+      por el simple hecho de que la imagen no estaba bien cortada o porque el número era ilegible. Con la base de datos actual es posible identificar
+      estos errores y corregirlos. Esta es una herramienta viva y a pesar de haber finalizado las elecciones aún puede ser de mucha utilidad.<br />
+      Una de las ideas que se ha sugerido es montar un servicio similar al Re-Captcha para que continuamente se esten validando las boletas.<br />
+      En este momento la herramienta es limitada en tanto solo cuenta votos válidos. Los votos nulos, abstenciones e impugnaciones no se cuentan
+      actualmente pero pueden ser agregadas fácilmente al sistema.</p>
+      <h1>¿Como puedo colaborar?</h1>
+      <p><strong>Si eres desarrollador de software</strong>: Haz un fork del código fuente en GitHub, copia el DUMP más reciente de la base de datos e intenta mejorar o
+      añadir funcionalidad extra a la aplicación. Una vez tengas los cambios listos haz un pull request para que tus cambios sean incorporados
+      a la plataforma</p>
+      <p><strong>Si eres un usuario</strong>: La confiabilidad del conteo irá incrementando en tanto más usuarios ingresen datos en la plataforma,
+      en tus ratos de ocio puedes ir al ingreso de conteos y digitar los números hasta que te aburras o simplemente compartir con tus amigos y conocidos
+      el link de conteos, cada digitación ingresada aumenta la confiabilidad del sistema.</p>
+      <p>Si necesitas hablar con una "persona" puedes escribir un mensaje en <a href="https://groups.google.com/forum/#!forum/elecciones-el-salvador---crowd-validation">Elecciones El Salvador - Crowd Validation</a> y muy seguramente alguno de los involucrados en el desarrollo de esta plataforma se comunicará contigo.</p>
   </div>
 </div>
