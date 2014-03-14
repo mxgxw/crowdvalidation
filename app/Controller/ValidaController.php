@@ -179,6 +179,20 @@ WHERE
     exit();
  }
 
+  public function sysStats() {
+    header("Content-Type: application/json");
 
+    $statIP = $this->HashTable->query("SELECT COUNT(*) as statIP FROM (SELECT DISTINCT origin FROM validaciones) as tbl1");
+    $statDig = $this->HashTable->query("SELECT COUNT(*) as statDig FROM validaciones");
+
+    echo json_encode(
+      array(
+        'statIP' => $statIP[0][0]['statIP'],
+        'statDig' => $statDig[0][0]['statDig']
+      )
+    );
+
+    exit();
+  }
 }
 

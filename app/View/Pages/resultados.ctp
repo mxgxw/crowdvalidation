@@ -186,11 +186,17 @@ $( function() {
           $('#g2VotosF').html(data.results[0].votos);
           drawPieChart('pieChart2', data.results);
       })
+  $.ajax({
+        url: "/valida/sysStats",
+      }).done(function( data ) {
+          $('#statIP').html(data.statIP);
+          $('#statDig').html(data.statDig);
+      })
 
 });
 </script>
 
-      <h1 class="chart--subHeadline">Contemos Nosotros</h1>
+      <h1>Contemos Nosotros</h1>
       <h2 class="chart--headline">Conteo de actas totalmente anónimo, distribuido y abierto. </h2>
       <h1>Porcentaje de votos con actas validadas en el sistema</h1>
       <p>En esta gráfica se muestran únicamente las actas en las cuales ambos partidos recibieron digitaciones coincidentes. Es decir
@@ -229,7 +235,6 @@ $( function() {
         otras palabras las digitaciones restantes aunque incompletas funcionan como un predictor "aceptable" del resultado final.<br /><br />
         La gráfica se genera a partir de <span id="g2Boletas"></span> actas que totalizan <span id="g2Votos"></span> votos correspondientes a
          <span id="g2VotosA"></span> votos para ARENA y <span id="g2VotosF"></span> votos para FMLN.</p>
-
       <div id="pieChart2">
         <svg id="pieChartSVG">
           <defs>
@@ -252,5 +257,11 @@ $( function() {
           </defs>
         </svg>
       </div>
+      <h1>Estadísticas de la plataforma</h1>
+      <p>
+        <strong>Número de IP públicas únicas participantes: </strong> <span id="statIP"></span><br />
+        <strong>Número total de digitaciones:</strong> <span id="statDig"></span>
+      </p;>
+
   </div>
 </div>

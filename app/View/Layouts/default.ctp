@@ -97,6 +97,7 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
        <ul class="">
                   <li><a href="https://github.com/mxgxw/crowdvalidation" target="_blank"><img alt="github" src="/img/github.png"> Crowdvalidation</a></li>
                   <li><a href="https://gist.github.com/hkadejo/9522141" target="_blank"><img alt="github" src="/img/github.png"> Corte de Actas</a></li>
+                  <li><a href="http://contemosnosotros.org/app/webroot/sqldumps/" target="_blank"><img alt="filedir" src="/img/github.png"> Base de datos (DUMP SQL)</a></li>
                 </ul>  
     </footer>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
