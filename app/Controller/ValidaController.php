@@ -102,4 +102,83 @@ class ValidaController extends AppController {
     }
     exit();
   }
+
+  public function resultJSON() {
+    header("Content-Type: application/json");
+    $result = $this->HashTable->query("
+SELECT
+  count(*) AS total_boletas,
+  (sum(f)/(sum(f)+sum(a))) AS perc_fmln,
+  (sum(a)/(sum(f)+sum(a))) AS perc_arena,
+  sum(f) as votos_fmln,
+  sum(a) as votos_arena
+FROM
+  results_final
+WHERE
+  f IS NOT NULL AND a IS NOT NULL");
+    echo json_encode(
+      array(
+        'boletas' => $result[0][0]['total_boletas'],
+        'votos' => $result[0][0]['votos_fmln']+$result[0][0]['votos_arena'],
+        'results' => array(
+          array(
+            'color' => 'red',
+            'description' => 'Votos digitados para FMLN a través de Contemos Nosotros',
+            'title' => 'FMLN',
+            'value' => $result[0][0]['perc_fmln'],
+            'votos' => $result[0][0]['votos_fmln']
+          ),
+          array(
+            'color' => 'blue',
+            'description' => 'Votos digitados para ARENA a través de Contemos Nosotros',
+            'title' => 'ARENA',
+            'value' => $result[0][0]['perc_arena'],
+            'votos' => $result[0][0]['votos_arena']
+          )
+        )
+      )
+    );
+    exit();
+ }
+
+  public function resultJSONAll() {
+    header("Content-Type: application/json");
+    $result = $this->HashTable->query("
+SELECT
+  count(*) AS total_boletas,
+  (sum(f)/(sum(f)+sum(a))) AS perc_fmln,
+  (sum(a)/(sum(f)+sum(a))) AS perc_arena,
+  sum(f) as votos_fmln,
+  sum(a) as votos_arena
+FROM
+  results_final
+WHERE
+  f IS NOT NULL OR a IS NOT NULL");
+    echo json_encode(
+      array(
+        'boletas' => $result[0][0]['total_boletas'],
+        'votos' => $result[0][0]['votos_fmln']+$result[0][0]['votos_arena'],
+        'results' => array(
+          array(
+            'color' => 'red',
+            'description' => 'Votos digitados para FMLN a través de Contemos Nosotros',
+            'title' => 'FMLN',
+            'value' => $result[0][0]['perc_fmln'],
+            'votos' => $result[0][0]['votos_fmln']
+          ),
+          array(
+            'color' => 'blue',
+            'description' => 'Votos digitados para ARENA a través de Contemos Nosotros',
+            'title' => 'ARENA',
+            'value' => $result[0][0]['perc_arena'],
+            'votos' => $result[0][0]['votos_arena']
+          )
+        )
+      )
+    );
+    exit();
+ }
+
+
 }
+
