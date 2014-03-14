@@ -22,3 +22,12 @@
 <p>Esperamos que esta herramienta sea útil y agradecemos de antemano a todos los que colaboraron en cualquier medida con el desarrollo de la misma.</p>
 
        </div> </div>
+<script>
+    $( document ).ready(function() {
+	
+$( ".acercade" ).addClass( "active" );
+
+
+
+ });
+    </script>

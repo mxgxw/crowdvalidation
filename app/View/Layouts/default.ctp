@@ -72,10 +72,10 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 
               <div class="collapse navbar-collapse  pull-right" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                   <li class="active"><a href="http://contemosnosotros.org/">Inicio</a></li>
-                  <li><a href="#">Resultados</a></li>
-                  <li><a href="/pages/faq">FAQ</a></li>
-                  <li><a href="/pages/acercade">Acerca de Nosotros</a></li>
+                  <li class="inicio"><a href="http://contemosnosotros.org/">Inicio</a></li>
+                  <li class="resultados"><a href="http://contemosnosotros.org/pages/resultados">Resultados</a></li>
+                  <li class="faq"><a href="http://contemosnosotros.org/pages/faq">FAQ</a></li>
+                  <li class="acercade"><a href="http://contemosnosotros.org/pages/acercade">Acerca de Nosotros</a></li>
                 </ul>                  
               </div>
             </div>
@@ -85,11 +85,43 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
       <div class="container info">
 	<?php echo $this->Session->flash(); ?>
 	<?php echo $this->fetch('content'); ?>
-      </div>
-    
+      
+    </div>
+    <footer class="container">
+    	<ul class="">
+                  <li class="inicio"><a href="http://contemosnosotros.org/">Inicio</a></li>
+                  <li class="resultados"><a href="http://contemosnosotros.org/pages/resultados">Resultados</a></li>
+                  <li class="faq"><a href="http://contemosnosotros.org/pages/faq">FAQ</a></li>
+                  <li class="acercade"><a href="http://contemosnosotros.org/pages/acercade">Acerca de Nosotros</a></li>
+                </ul> 
+       <ul class="">
+                  <li><a href="https://github.com/mxgxw/crowdvalidation" target="_blank"><img alt="github" src="/img/github.png"> Crowdvalidation</a></li>
+                  <li><a href="https://gist.github.com/hkadejo/9522141" target="_blank"><img alt="github" src="/img/github.png"> Corte de Actas</a></li>
+                </ul>  
+    </footer>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
+    
+    
+   <!-- AddThis Smart Layers BEGIN -->
+<!-- Go to http://www.addthis.com/get/smart-layers to customize -->
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5321ea53081e0c25"></script>
 <script type="text/javascript">
+  addthis.layers({
+    'theme' : 'transparent',
+    'share' : {
+      'position' : 'left',
+      'numPreferredServices' : 5
+    }   
+  });
+</script>
+<!-- AddThis Smart Layers END -->
+    
+    
+<script type="text/javascript">
+
+
+
 var token = 0;
 function loadNew() {
   $.ajax({

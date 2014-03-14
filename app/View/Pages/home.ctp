@@ -39,6 +39,9 @@
         </div>
 		<script>
     $( document ).ready(function() {
+	
+$( ".inicio" ).addClass( "active" );
+
 $("#txtCounter").focusin(function() {
   $( this ).attr("placeholder","");
 }).focusout(function(){

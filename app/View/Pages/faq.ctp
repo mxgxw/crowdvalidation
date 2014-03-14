@@ -23,3 +23,12 @@ contemosnosotros te muestra uno de los dos conteos de votos cada vez, la idea es
 <p>Recordemos que cada hoja fue validada y firmada por la JRV asignada y que componen representantes de AMBOS partidos, osea que esas actas ya llevan el visto bueno de AMBOS partidos</p></blockquote>
 
         </div></div>
+<script>
+    $( document ).ready(function() {
+	
+$( ".faq" ).addClass( "active" );
+
+
+
+ });
+    </script>
