@@ -76,6 +76,7 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
                   <li class="resultados"><a href="http://contemosnosotros.org/pages/resultados">Resultados</a></li>
                   <li class="faq"><a href="http://contemosnosotros.org/pages/faq">FAQ</a></li>
                   <li class="acercade"><a href="http://contemosnosotros.org/pages/acercade">Acerca de Nosotros</a></li>
+                  <li class="agradecimientos"><a href="http://contemosnosotros.org/pages/agradecimientos">Agradecimientos</a></li>
                 </ul>                  
               </div>
             </div>

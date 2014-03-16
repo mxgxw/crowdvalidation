@@ -17,6 +17,8 @@
 <p>El código fuente de la aplicación con la que se recortaron los votos de las actas publicas del TSE para evitar que los digitadores supieran a que partido pertenecen y hacer mas imparcial el proceso de conteo:</p>
 <p><a href="https://gist.github.com/hkadejo/9522141" target="_blank">https://gist.github.com/hkadejo/9522141
 </a></p>
+<p>Código alternativo:<br />
+<a href="https://gist.github.com/lnramirez/9470779">https://gist.github.com/lnramirez/9470779</a></p>
 <p>Adicionalmente se publican los <em>&quot;dump&quot;</em> de bases de datos del sistema, estos son archivos que contienen copias &quot;integras&quot; de los datos recolectados a través de la plataforma desde que inició su funcionamiento a través de la siguiente dirección:</p>
 <p><a href="http://contemosnosotros.org/app/webroot/sqldumps/">http://contemosnosotros.org/app/webroot/sqldumps/</a></p>
 <p>Esperamos que esta herramienta sea útil y agradecemos de antemano a todos los que colaboraron en cualquier medida con el desarrollo de la misma.</p>
