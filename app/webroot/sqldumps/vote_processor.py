@@ -2,7 +2,7 @@
 
 import MySQLdb
 
-db = MySQLdb.connect(host="localhost",user="teubico_crowdval",passwd="--cambiarpass--",db="teubico_wrdp1")
+db = MySQLdb.connect(host="localhost",user="teubico_crowdval",passwd="crowdval2014",db="teubico_wrdp1")
 
 cur = db.cursor();
 cMaxA = db.cursor();
@@ -30,6 +30,6 @@ for row in cur.fetchall():
     tVotB = str(resB[0])
     tScrB = str(resB[1])
 
-  updater.execute("INSERT INTO results_final(acta_id,f,score_f,a,score_a) VALUES("+str(row[0])+","+tVotA+","+tScrA+","+tVotB+","+tScrB+")")
+  updater.execute("INSERT INTO results_final2(acta_id,f,score_f,a,score_a) VALUES("+str(row[0])+","+tVotA+","+tScrA+","+tVotB+","+tScrB+")")
 
   print "Procesada acta: "+str(row[0])

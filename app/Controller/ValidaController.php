@@ -12,7 +12,10 @@ class ValidaController extends AppController {
     $nextImg = $this->HashTable->find(
       'first',
       array(
-	'conditions' => array('HashTable.hash IS NULL'),
+	'conditions' => array(
+    'HashTable.hash IS NULL',
+    'HashTable.completed = 0'
+    ),
 	'order' => 'RAND()'
       )
     );
@@ -23,7 +26,10 @@ class ValidaController extends AppController {
       $nextImg = $this->HashTable->find(
 	'first',
 	array(
-	  'conditions' => array('HashTable.hash IS NULL'),
+	  'conditions' => array(
+      'HashTable.hash IS NULL',
+      'HashTable.completed = 0'
+     ),
 	  'order' => 'RAND()'
 	)
       );
@@ -113,7 +119,7 @@ SELECT
   sum(f) as votos_fmln,
   sum(a) as votos_arena
 FROM
-  results_final
+  results_final5
 WHERE
   f IS NOT NULL AND a IS NOT NULL");
     echo json_encode(
@@ -151,7 +157,7 @@ SELECT
   sum(f) as votos_fmln,
   sum(a) as votos_arena
 FROM
-  results_final
+  results_final5
 WHERE
   f IS NOT NULL OR a IS NOT NULL");
     echo json_encode(
