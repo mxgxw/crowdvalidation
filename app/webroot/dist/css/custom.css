@@ -42,6 +42,9 @@ footer{
 	background-color: #0d3a57; 
 	color: rgba(255,255,255,.84); 
 	margin: 0em 0; padding: 5em 0
+	-webkit-box-shadow: 0 -4px 6px #ccc;
+	-moz-box-shadow: 0 -4px 6px #ccc;
+	box-shadow: 0 -4px 6px #ccc;
 }
 footer a, footer p,{
 	color: rgba(255,255,255,.84); 
@@ -50,9 +53,9 @@ footer a, footer p,{
 margin-bottom: 0px;
 }
 .home-welcome{background-color: #0d3a57; 
-	-webkit-box-shadow: 0 -4px 6px #ccc;
-	-moz-box-shadow: 0 -4px 6px #ccc;
-	box-shadow: 0 -4px 6px #ccc;
+	-webkit-box-shadow: 0 4px 6px #ccc;
+	-moz-box-shadow: 0 4px 6px #ccc;
+	box-shadow: 0 4px 6px #ccc;
 	color:#fff;
 }
 
