@@ -1,5 +1,5 @@
 
-      <div class="home-welcome homebx">
+      <div class="home-welcome homebx"><div class="home-texture">
 	      <div class="container">
 	    		<div class="row">
 	                <div class="col-lg-6">
@@ -13,7 +13,7 @@
 	                	<img src="http://contemosnosotros.org/app/webroot/img/landing-box.png" alt="elecciones" />
 	                </div>
 	        </div></div>
-        </div>
+        </div></div>
         
         <div class="home-why homebx">
 	      <div class="container">
