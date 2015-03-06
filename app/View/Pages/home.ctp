@@ -1,5 +1,5 @@
 
-      <div class="home-welcome homebx"><div class="home-texture">
+      <div class="home-welcome"><div class="home-texture homebx">
 	      <div class="container">
 	    		<div class="row">
 	                <div class="col-lg-6">
