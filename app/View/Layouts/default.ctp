@@ -75,15 +75,15 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
     
    
         <ul class="nav navbar-nav">
-            <li class="active"><a href="javascript:void(0)">Acerca de</a></li>
-            <li><a href="javascript:void(0)">Agradecimientos</a></li>
-            <li><a href="javascript:void(0)">FAQ</a></li>
+            <li class="active"><a href="http://contemosnosotros.org/pages/acercade">Acerca de</a></li>
+            <li><a href="http://contemosnosotros.org/pages/agradecimientos">Agradecimientos</a></li>
+            <li><a href="http://contemosnosotros.org/pages/faq">FAQ</a></li>
             <li class="dropdown">
                 <a href="bootstrap-elements.html" data-target="#" class="dropdown-toggle" data-toggle="dropdown">Resultados <b class="caret"></b></a>
                 <ul class="dropdown-menu">
-                    <li><a href="javascript:void(0)">Alcaldes</a></li>
-                    <li><a href="javascript:void(0)">Diputados</a></li>
-                    <li><a href="javascript:void(0)">Parlacen</a></li>
+                    <li><a href="http://contemosnosotros.org/pages/alcaldes">Alcaldes</a></li>
+                    <li><a href="http://contemosnosotros.org/pages/diputados">Diputados</a></li>
+                    <li><a href="http://contemosnosotros.org/pages/parlacen">Parlacen</a></li>
                    
                 </ul>
             </li>
