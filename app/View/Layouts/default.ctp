@@ -46,10 +46,9 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
     <link href="/css/style.css" rel="stylesheet">-->
     <link href="dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="dist/css/ripples.min.css" rel="stylesheet">
-    <link href="dist/css/custom.css" rel="stylesheet">
     <link href="dist/css/material-wfont.min.css" rel="stylesheet">
     <link href="dist/css/snackbar.min.css" rel="stylesheet">
-
+    <link href="dist/css/custom.css" rel="stylesheet">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
