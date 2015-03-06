@@ -44,11 +44,11 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
     <!-- Bootstrap 
     <link href="/css/bootstrap.min.css" rel="stylesheet">
     <link href="/css/style.css" rel="stylesheet">-->
-    <link href="dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="dist/css/ripples.min.css" rel="stylesheet">
-    <link href="dist/css/material-wfont.min.css" rel="stylesheet">
-    <link href="dist/css/snackbar.min.css" rel="stylesheet">
-    <link href="dist/css/custom.css" rel="stylesheet">
+    <link href="http://contemosnosotros.org/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="http://contemosnosotros.org/dist/css/ripples.min.css" rel="stylesheet">
+    <link href="http://contemosnosotros.org/dist/css/material-wfont.min.css" rel="stylesheet">
+    <link href="http://contemosnosotros.org/dist/css/snackbar.min.css" rel="stylesheet">
+    <link href="http://contemosnosotros.org/dist/css/custom.css" rel="stylesheet">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -223,13 +223,13 @@ $(function () {
 	
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-	<script src="dist/js/bootstrap.min.js"></script>
-    	<script src="dist/js/ripples.min.js"></script>
-        <script src="dist/js/material.min.js"></script>
-        <script src="dist/js/snackbar.min.js"></script>
+	<script src="http://contemosnosotros.org/dist/js/bootstrap.min.js"></script>
+    	<script src="http://contemosnosotros.org/dist/js/ripples.min.js"></script>
+        <script src="http://contemosnosotros.org/dist/js/material.min.js"></script>
+        <script src="http://contemosnosotros.org/dist/js/snackbar.min.js"></script>
 
 
-        <script src="dist/js/jquery.nouislider.min.js"></script>
+        <script src="http://contemosnosotros.org/dist/js/jquery.nouislider.min.js"></script>
         <script>
             $(function() {
                 $.material.init();
