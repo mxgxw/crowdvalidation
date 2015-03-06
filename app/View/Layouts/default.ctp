@@ -111,11 +111,11 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
   
   
   
-      <div class="container info">
+      
 	<?php echo $this->Session->flash(); ?>
 	<?php echo $this->fetch('content'); ?>
       
-    </div>
+    
     
     
     
