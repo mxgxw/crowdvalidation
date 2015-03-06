@@ -48,7 +48,7 @@ footer{
 	position: relative;
 	z-index: 100;
 }
-footer a, footer p,{
+footer a, footer a:hover, footer a:focus, footer p,{
 	color: rgba(255,255,255,.84); 
 }
 .navbar {
