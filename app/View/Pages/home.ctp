@@ -3,14 +3,17 @@
 	      <div class="container">
 	    		<div class="row">
 	                <div class="col-lg-6">
-	                	<h1>Conteo Electoral 2015</h1>
+	                <h1>Contemos Nosotros</h1>
+	                	<h2>Conteo Electoral 2015</h2>
 	                	<p><strong>#ContemosNosotros</strong> es una herramienta 
 	                	<a href="http://es.wikipedia.org/wiki/Crowdsourcing" target="_blank">Crowd-sourced</a>, 
 	                	totalmente anónima, capaz de verificar los conteos que se encuentran en las actas de las
 	                	Juntas Electorales enviadas al TSE. </p>
 	                </div>
 	                <div class="col-lg-6">
+	                	<div class="imgbox">
 	                	<img src="http://contemosnosotros.org/app/webroot/img/landing-box.png" alt="elecciones" />
+	                	</div>
 	                </div>
 	        </div></div>
         </div></div>
@@ -19,7 +22,9 @@
 	      <div class="container">
 	    		<div class="row">
 	                <div class="col-lg-6">
+	                	<div class="imgbox">
 	                	<img src="http://contemosnosotros.org/app/webroot/img/1_.png" alt="porque lo hacemos" />
+	                	</div>
 	                </div>
 	                <div class="col-lg-6">
 	                	<h1>¿Por qué lo hacemos?</h1>
@@ -62,7 +67,9 @@
 	                	
 	                </div>
 	                <div class="col-lg-6">
+	                	<div class="imgbox">
 	                	<img src="http://contemosnosotros.org/app/webroot/img/2_.png" alt="contribuye" />
+	                	</div>
 	                </div>
 	    		
 	                </div></div>
@@ -72,7 +79,9 @@
 	    		<div class="row">
 	    			
 	    		<div class="col-lg-6">
+	    		<div class="imgbox">
 		                <img src="http://contemosnosotros.org/app/webroot/img/3_.png" alt="resultados" />
+		                </div>
 	                </div>
 	                <div class="col-lg-6">
 	                	<h1>Mira los resultados</h1>
