@@ -34,6 +34,9 @@
 			
 			/* estilos salvadoresc */
 
+.navbar.navbar, .navbar-default.navbar{
+	background-color: #0d3a57;
+}
 
 footer{
 	background-color: #0d3a57; color: rgba(255,255,255,.84); margin: 0em 0; padding: 5em 0}
