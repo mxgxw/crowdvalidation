@@ -45,6 +45,7 @@ footer{
 	-webkit-box-shadow: 0 -4px 6px #ccc;
 	-moz-box-shadow: 0 -4px 6px #ccc;
 	box-shadow: 0 -4px 6px #ccc;
+	position: relative;
 }
 footer a, footer p,{
 	color: rgba(255,255,255,.84); 
@@ -54,15 +55,27 @@ margin-bottom: 0px;
 }
 .home-welcome{background-color: #0d3a57; 
 	color:#fff;
+	-webkit-box-shadow: 0 4px 6px #ccc;
+	-moz-box-shadow: 0 4px 6px #ccc;
+	box-shadow: 0 4px 6px #ccc;
+	position: relative;
 }
 
 .home-why{
 	background-color: #fff;
 	color:#0d3a57;
+	-webkit-box-shadow: 0 4px 6px #ccc;
+	-moz-box-shadow: 0 4px 6px #ccc;
+	box-shadow: 0 4px 6px #ccc;
+	position: relative;
 }
 .home-help{
 	background-color: #f1f1f1;
 	color:#0d3a57;
+	-webkit-box-shadow: 0 4px 6px #ccc;
+	-moz-box-shadow: 0 4px 6px #ccc;
+	box-shadow: 0 4px 6px #ccc;
+	position: relative;
 }
 .home-results{
 	background-color: #fff;
@@ -71,10 +84,7 @@ margin-bottom: 0px;
 .homebx{
 	padding-top:60px;
 	padding-bottom:60px;
-	-webkit-box-shadow: 0 4px 6px #ccc;
-	-moz-box-shadow: 0 4px 6px #ccc;
-	box-shadow: 0 4px 6px #ccc;
-	position: relative;
+
 }
 
 
