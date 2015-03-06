@@ -36,11 +36,6 @@
 
 .navbar.navbar, .navbar-default.navbar{
 	background-color: #0d3a57;
-	-webkit-box-shadow: 0 4px 6px #333;
-	-moz-box-shadow: 0 4px 6px #333;
-	box-shadow: 0 4px 6px #333;
-	position: relative;
-	z-index: 100;
 }
 
 footer{
