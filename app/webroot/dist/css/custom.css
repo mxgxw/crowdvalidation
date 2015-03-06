@@ -60,7 +60,7 @@ margin-bottom: 0px;
 	-moz-box-shadow: 0 4px 6px #ccc;
 	box-shadow: 0 4px 6px #ccc;
 	position: relative;
-	z-index: 10;
+	z-index: 30;
 }
 
 .home-why{
@@ -79,7 +79,7 @@ margin-bottom: 0px;
 	-moz-box-shadow: 0 4px 6px #ccc;
 	box-shadow: 0 4px 6px #ccc;
 	position: relative;
-	z-index: 30;
+	z-index: 10;
 }
 .home-results{
 	background-color: #fff;
