@@ -54,7 +54,11 @@ footer a, footer a:hover, footer a:focus, footer p,{
 .navbar {
 margin-bottom: 0px;
 }
-.home-welcome{background-color: #0d3a57; 
+.home-welcome{
+	background-color: #0d3a57; 
+	background-image:http://contemosnosotros.org/app/webroot/img/TSE_pattern_Home.png;
+	background-repeat:repeat;
+	background-position:top left;
 	color:#fff;
 	-webkit-box-shadow: 0 4px 6px #ccc;
 	-moz-box-shadow: 0 4px 6px #ccc;
