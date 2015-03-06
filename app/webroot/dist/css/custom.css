@@ -56,7 +56,6 @@ margin-bottom: 0px;
 }
 .home-welcome{
 	background-color: #0d3a57; 
-	background: url('http://contemosnosotros.org/app/webroot/img/TSE_pattern_Home.png') 50% 50% repeat;
 	color:#fff;
 	-webkit-box-shadow: 0 4px 6px #ccc;
 	-moz-box-shadow: 0 4px 6px #ccc;
@@ -64,6 +63,11 @@ margin-bottom: 0px;
 	position: relative;
 	z-index: 30;
 }
+.home-welcome .home-texture{
+	background-color: transparent;
+	background: url('http://contemosnosotros.org/app/webroot/img/TSE_pattern_Home.png') 50% 50% repeat;
+}
+
 
 .home-why{
 	background-color: #fff;
