@@ -69,7 +69,7 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="javascript:void(0)">Elecciones 2015</a>
+        <a class="navbar-brand" href="http://contemosnosotros.org/">Elecciones 2015</a>
     </div>
     <div class="navbar-collapse collapse navbar-responsive-collapse">
     
