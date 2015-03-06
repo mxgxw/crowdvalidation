@@ -1,5 +1,5 @@
 
-      <div class="home-welcome">
+      <div class="home-welcome homebx">
 	      <div class="container">
 	    		<div class="row">
 	                <div class="col-lg-6">
@@ -15,7 +15,7 @@
 	        </div></div>
         </div>
         
-        <div class="home-why">
+        <div class="home-why homebx">
 	      <div class="container">
 	    		<div class="row">
 	                <div class="col-lg-6">
@@ -33,7 +33,7 @@
 	        </div></div>
         </div>
         
-        <div class="home-help">
+        <div class="home-help homebx">
 	      <div class="container">
 	    		<div class="row">
 	    		
@@ -63,7 +63,7 @@
 	    		
 	                </div></div>
         </div>
-        <div class="home-results">
+        <div class="home-results homebx">
 	      <div class="container">
 	    		<div class="row">
 	    			<p>imagen resultados</p>
