@@ -30,8 +30,8 @@
 	                	capaces de diseñar realidades alternativas y aplicaciones que cambian nuestra vida diaria 
 	                	y la forma en que vemos nuestro entorno. </p>
 	                	<p> No representamos a ninguna empresa ni interés particular, cada uno de los participantes ha dedicado un poco
-	                	de su tiempo libre para colaborar programando, diseñando o simplemente ingresando los conteos del sistema. Contemosnosotros.org es
-	                	une herramienta totalemente OpenSource, Libre y Transparente cuyo desarrollo no lo dicta nadie sino el colectivo de la misma manera
+	                	de su tiempo libre para colaborar programando, diseñando o simplemente ingresando conteos en el sistema. Contemosnosotros.org es
+	                	una herramienta totalemente OpenSource, Libre y Transparente cuyo desarrollo no lo dicta nadie sino el colectivo de la misma manera
 	                	que Linux, LibreOffice u otras herramientas construidas a partide de las colaboraciones de individuales.</p>
 	                </div>
 	        </div></div>
