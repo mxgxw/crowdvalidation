@@ -66,9 +66,9 @@
         <div class="home-results homebx">
 	      <div class="container">
 	    		<div class="row">
-	    			<img src="http://contemosnosotros.org/app/webroot/img/3_.png" alt="resultados" />
+	    			
 	    		<div class="col-lg-6">
-	                
+		                <img src="http://contemosnosotros.org/app/webroot/img/3_.png" alt="resultados" />
 	                </div>
 	                <div class="col-lg-6">
 	                	<h1>Mira los resultados</h1>
