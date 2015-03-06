@@ -53,6 +53,7 @@ margin-bottom: 0px;
 	-webkit-box-shadow: 0 -4px 6px #ccc;
 	-moz-box-shadow: 0 -4px 6px #ccc;
 	box-shadow: 0 -4px 6px #ccc;
+	color:#fff;
 }
 
 .home-why{
@@ -60,18 +61,21 @@ margin-bottom: 0px;
 	-webkit-box-shadow: 0 4px 6px #ccc;
 	-moz-box-shadow: 0 4px 6px #ccc;
 	box-shadow: 0 4px 6px #ccc;
+	color:#0d3a57;
 }
 .home-help{
 	background-color: #f1f1f1;
 	-webkit-box-shadow: 0 4px 6px #ccc;
 	-moz-box-shadow: 0 4px 6px #ccc;
 	box-shadow: 0 4px 6px #ccc;
+	color:#0d3a57;
 }
 .home-results{
 	background-color: #fff;
 	-webkit-box-shadow: 0 4px 6px #ccc;
 	-moz-box-shadow: 0 4px 6px #ccc;
 	box-shadow: 0 4px 6px #ccc;
+	color:#0d3a57;
 }
 homebx{
 	padding-top:60px;
