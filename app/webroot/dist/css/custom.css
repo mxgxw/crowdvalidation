@@ -46,6 +46,9 @@ footer{
 footer a, footer p,{
 	color: rgba(255,255,255,.84); 
 }
+.navbar {
+margin-bottom: 0px;
+}
 .home-welcome{background-color: #0d3a57; 
 	-webkit-box-shadow: 0 -4px 6px #ccc;
 	-moz-box-shadow: 0 -4px 6px #ccc;
