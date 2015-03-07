@@ -66,36 +66,29 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
                 </button>
                 <?php echo $this->Html->link('Elecciones 2015', '/', array('class' => 'navbar-brand')); ?>
             </div>
-            <div class="navbar-collapse collapse navbar-responsive-collapse">
-
+            <div class="navbar-collapse collapse navbar-responsive-collapse navbar-right">
                 <ul class="nav navbar-nav">
-                    <li class="active"><?php echo $this->Html->link('Elecciones 2015', '/acercade'); ?></li>
-                    <li><?php echo $this->Html->link('Agradecimientos', '/agradecimientos'); ?></li>
-                    <li><?php echo $this->Html->link('FAQ', '/faq'); ?></li>
+                    <li class="<?php if($this->viewVars['page'] == 'acercade') { echo 'active'; } ?>">
+                        <?php echo $this->Html->link('Elecciones 2015', '/pages/acercade'); ?>
+                    </li>
+                    <li class="<?php if($this->viewVars['page'] == 'agradecimientos') { echo 'active'; } ?>">
+                        <?php echo $this->Html->link('Agradecimientos', '/pages/agradecimientos'); ?></li>
+                    <li class="<?php if($this->viewVars['page'] == 'faq') { echo 'active'; } ?>">
+                        <?php echo $this->Html->link('FAQ', '/pages/faq'); ?>
+                    </li>
                     <li class="dropdown">
                         <a href="bootstrap-elements.html" data-target="#" class="dropdown-toggle"
                            data-toggle="dropdown">Resultados <b class="caret"></b></a>
                         <ul class="dropdown-menu">
-                            <li><?php echo $this->Html->link('Alcaldes', '/alcaldes'); ?></li>
-                            <li><?php echo $this->Html->link('Diputados', '/diputados'); ?></li>
-                            <li><?php echo $this->Html->link('Parlacen', '/parlacen'); ?></li>
-                        </ul>
-                    </li>
-                </ul>
-                <!--<form class="navbar-form navbar-left">
-                    <input type="text" class="form-control col-lg-8" placeholder="Search">
-                </form>-->
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="javascript:void(0)">Link</a></li>
-                    <li class="dropdown">
-                        <a href="bootstrap-elements.html" data-target="#" class="dropdown-toggle"
-                           data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="javascript:void(0)">Action</a></li>
-                            <li><a href="javascript:void(0)">Another action</a></li>
-                            <li><a href="javascript:void(0)">Something else here</a></li>
-                            <li class="divider"></li>
-                            <li><a href="javascript:void(0)">Separated link</a></li>
+                            <li class="<?php if($this->viewVars['page'] == 'faq') { echo 'active'; } ?>">
+                                <?php echo $this->Html->link('Alcaldes', '/pages/alcaldes'); ?>
+                            </li>
+                            <li class="<?php if($this->viewVars['page'] == 'diputados') { echo 'active'; } ?>">
+                                <?php echo $this->Html->link('Diputados', '/pages/diputados'); ?>
+                            </li>
+                            <li class="<?php if($this->viewVars['page'] == 'parlacen') { echo 'active'; } ?>">
+                                <?php echo $this->Html->link('Parlacen', '/pages/parlacen'); ?>
+                            </li>
                         </ul>
                     </li>
                 </ul>
@@ -113,13 +106,11 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
         <div class="row">
             <div class="col-lg-12">
                 <ul class="">
-                    <li class="inicio"><a href="http://contemosnosotros.org/">Inicio</a></li>
-                    <li class="resultados"><a href="http://contemosnosotros.org/pages/resultados">Resultados</a></li>
-                    <li class="faq"><a href="http://contemosnosotros.org/pages/faq">FAQ</a></li>
-                    <li class="acercade"><a href="http://contemosnosotros.org/pages/acercade">Acerca de Nosotros</a>
-                    </li>
-                    <li class="acercade"><a href="http://contemosnosotros.org/pages/agradecimientos">Agradecimientos</a>
-                    </li>
+                    <li class="inicio"><?php echo $this->Html->link('Inicio', '/'); ?></li>
+                    <li class="resultados"><?php echo $this->Html->link('Resultados', '/pages/resultados'); ?></li>
+                    <li class="faq"><?php echo $this->Html->link('FAQ', '/pages/faq'); ?></li>
+                    <li class="acercade"><?php echo $this->Html->link('Acerca de nosotros', '/pages/acercade'); ?> </li>
+                    <li class="acercade"><?php echo $this->Html->link('Agradecimientos', '/pages/agradecimientos'); ?></li>
                 </ul>
                 <ul class="">
                     <li><a href="https://github.com/mxgxw/crowdvalidation" target="_blank"><img alt="github"
