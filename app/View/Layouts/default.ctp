@@ -54,80 +54,13 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 </head>
 <body>
 <div id="main-header">
-    <!-- NAVBAR  -->
-    <div class="navbar navbar-default">
-        <div class="container">
-
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse"
-                        data-target=".navbar-responsive-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <?php echo $this->Html->link('Elecciones 2015', '/', array('class' => 'navbar-brand')); ?>
-            </div>
-            <div class="navbar-collapse collapse navbar-responsive-collapse navbar-right">
-                <ul class="nav navbar-nav">
-                    <li class="<?php if($this->viewVars['page'] == 'acercade') { echo 'active'; } ?>">
-                        <?php echo $this->Html->link('Elecciones 2015', '/pages/acercade'); ?>
-                    </li>
-                    <li class="<?php if($this->viewVars['page'] == 'agradecimientos') { echo 'active'; } ?>">
-                        <?php echo $this->Html->link('Agradecimientos', '/pages/agradecimientos'); ?></li>
-                    <li class="<?php if($this->viewVars['page'] == 'faq') { echo 'active'; } ?>">
-                        <?php echo $this->Html->link('FAQ', '/pages/faq'); ?>
-                    </li>
-                    <li class="dropdown">
-                        <a href="bootstrap-elements.html" data-target="#" class="dropdown-toggle"
-                           data-toggle="dropdown">Resultados <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                            <li class="<?php if($this->viewVars['page'] == 'faq') { echo 'active'; } ?>">
-                                <?php echo $this->Html->link('Alcaldes', '/pages/alcaldes'); ?>
-                            </li>
-                            <li class="<?php if($this->viewVars['page'] == 'diputados') { echo 'active'; } ?>">
-                                <?php echo $this->Html->link('Diputados', '/pages/diputados'); ?>
-                            </li>
-                            <li class="<?php if($this->viewVars['page'] == 'parlacen') { echo 'active'; } ?>">
-                                <?php echo $this->Html->link('Parlacen', '/pages/parlacen'); ?>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <!-- //NAVBAR   -->
+    <?php echo $this->element('nav')?>
 </div>
 
 <?php echo $this->Session->flash(); ?>
 <?php echo $this->fetch('content'); ?>
 
-<footer>
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <ul class="">
-                    <li class="inicio"><?php echo $this->Html->link('Inicio', '/'); ?></li>
-                    <li class="resultados"><?php echo $this->Html->link('Resultados', '/pages/resultados'); ?></li>
-                    <li class="faq"><?php echo $this->Html->link('FAQ', '/pages/faq'); ?></li>
-                    <li class="acercade"><?php echo $this->Html->link('Acerca de nosotros', '/pages/acercade'); ?> </li>
-                    <li class="acercade"><?php echo $this->Html->link('Agradecimientos', '/pages/agradecimientos'); ?></li>
-                </ul>
-                <ul class="">
-                    <li><a href="https://github.com/mxgxw/crowdvalidation" target="_blank"><img alt="github"
-                                                                                                src="/img/github.png">
-                            Crowdvalidation</a></li>
-                    <li><a href="https://gist.github.com/hkadejo/9522141" target="_blank"><img alt="github"
-                                                                                               src="/img/github.png">
-                            Corte de Actas</a></li>
-                    <li><a href="http://contemosnosotros.org/app/webroot/sqldumps/" target="_blank"><img alt="filedir"
-                                                                                                         src="/img/github.png">
-                            Base de datos (DUMP SQL)</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</footer>
+<?php echo $this->element('footer')?>
 
 
 <!-- AddThis Smart Layers BEGIN -->
@@ -145,7 +78,7 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 <!-- AddThis Smart Layers END -->
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<?php echo $this->Html->script('https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js'); ?>
 <?php echo $this->Html->script(array('bootstrap.min', 'ripples.min', 'material.min', 'snackbar.min')); ?>
 
 <!-- mario revisate estos scripts porfavor    -->
@@ -183,7 +116,6 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
             })
         }
     }
-    console.log($);
     $(function () {
         $("#alert-close-btn").on("click", function () {
             $("#alert-box").hide();
@@ -212,31 +144,6 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 <?php echo $this->element('sql_dump'); ?>
 
 <!-- scripts revision    -->
-
-<script src="http://contemosnosotros.org/dist/js/jquery.nouislider.min.js"></script>
-<script>
-    $(function () {
-        $.material.init();
-        $(".shor").noUiSlider({
-            start: 40,
-            connect: "lower",
-            range: {
-                min: 0,
-                max: 100
-            }
-        });
-
-        $(".svert").noUiSlider({
-            orientation: "vertical",
-            start: 40,
-            connect: "lower",
-            range: {
-                min: 0,
-                max: 100
-            }
-        });
-    });
-</script>
 
 <script>
     (function (i, s, o, g, r, a, m) {
