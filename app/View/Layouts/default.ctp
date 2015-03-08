@@ -43,6 +43,7 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
     <?php echo $this->Html->css('snackbar.min'); ?>
     <?php echo $this->Html->css('custom'); ?>
 
+    <?php echo $this->Html->css('http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,700'); ?>
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
