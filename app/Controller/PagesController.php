@@ -74,6 +74,6 @@ class PagesController extends AppController {
 			throw new NotFoundException();
 		}
 		$this->set('cakeDescription', "");
-		$this->set('title_for_layout', "Elecciones 2014 :: Conteo Social");
+		$this->set('title_for_layout', "Contemos Nosotros Web App para validar actas de votación");
 	}
 }
