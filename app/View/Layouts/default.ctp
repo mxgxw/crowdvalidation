@@ -34,14 +34,16 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
     echo $this->Html->meta('icon');
     echo $this->fetch('meta');
     echo $this->fetch('css');
+
+    // Include jQuery
+    echo $this->Html->script('https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js');
+    echo $this->Js->writeBuffer(array('onDomReady' => false));
+
+    // Include any other scripts you've set
     echo $this->fetch('script');
     ?>
     <!-- Bootstrap -->
-    <?php echo $this->Html->css('bootstrap.min'); ?>
-    <?php echo $this->Html->css('ripples.min'); ?>
-    <?php echo $this->Html->css('material-wfont.min'); ?>
-    <?php echo $this->Html->css('snackbar.min'); ?>
-    <?php echo $this->Html->css('custom'); ?>
+    <?php echo $this->Html->css(array('bootstrap.min','ripples.min','material-wfont.min','snackbar.min','custom')); ?>
 
     <?php echo $this->Html->css('http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,700'); ?>
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -53,13 +55,16 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 
 </head>
 <body>
+<!-- Navbar -->
 <div id="main-header">
     <?php echo $this->element('nav')?>
 </div>
 
+<!-- Content -->
 <?php echo $this->Session->flash(); ?>
 <?php echo $this->fetch('content'); ?>
 
+<!-- Footer -->
 <?php echo $this->element('footer')?>
 
 
@@ -78,7 +83,6 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 <!-- AddThis Smart Layers END -->
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<?php echo $this->Html->script('https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js'); ?>
 <?php echo $this->Html->script(array('bootstrap.min', 'ripples.min', 'material.min', 'snackbar.min')); ?>
 
 <!-- mario revisate estos scripts porfavor    -->
