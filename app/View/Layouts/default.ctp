@@ -85,6 +85,13 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <?php echo $this->Html->script(array('bootstrap.min', 'ripples.min', 'material.min', 'snackbar.min')); ?>
 
+<!-- Init Material Design -->
+<script type="text/javascript">
+    $(function () {
+        $.material.init();
+    });
+</script>
+
 <!-- mario revisate estos scripts porfavor    -->
 <script type="text/javascript">
     var token = 0;
@@ -149,6 +156,8 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 
 <!-- scripts revision    -->
 
+
+<!-- Google Analytics -->
 <script>
     (function (i, s, o, g, r, a, m) {
         i['GoogleAnalyticsObject'] = r;
