@@ -51,11 +51,3 @@
 
     </div>
 </div>
-<script>
-    $(document).ready(function () {
-
-        $(".faq").addClass("active");
-
-
-    });
-</script>
