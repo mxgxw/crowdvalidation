@@ -31,8 +31,7 @@
 			
 			
 			
-			
-			/* estilos salvadoresc */
+/* estilos salvadoresc */
 
 .navbar.navbar, .navbar-default.navbar{
 	background-color: #0d3a57;
@@ -62,6 +61,7 @@ margin-bottom: 0px;
 	box-shadow: 0 4px 6px #ccc;
 	position: relative;
 	z-index: 30;
+	font-size: 16px;
 }
 .home-welcome .home-texture{
 	background-color: transparent;
@@ -71,16 +71,15 @@ margin-bottom: 0px;
 
 .home-why{
 	background-color: #fff;
-	color:#0d3a57;
 	-webkit-box-shadow: 0 4px 6px #ccc;
 	-moz-box-shadow: 0 4px 6px #ccc;
 	box-shadow: 0 4px 6px #ccc;
 	position: relative;
 	z-index: 20;
+	
 }
 .home-help{
 	background-color: #f1f1f1;
-	color:#0d3a57;
 	-webkit-box-shadow: 0 4px 6px #ccc;
 	-moz-box-shadow: 0 4px 6px #ccc;
 	box-shadow: 0 4px 6px #ccc;
@@ -89,11 +88,10 @@ margin-bottom: 0px;
 }
 .home-results{
 	background-color: #fff;
-	color:#0d3a57;
 }
 .homebx{
-	padding-top:60px;
-	padding-bottom:60px;
+	padding-top: 120px;
+	padding-bottom: 120px;
 
 }
 .imgbox img{
@@ -101,3 +99,48 @@ margin-bottom: 0px;
 	max-height: 100%;
 }
 
+
+/*Estilos victorm*/
+
+body{
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 200; 
+	font-size: 18px;
+	color:#5D5D5D;
+}
+
+.box-title:before{
+    content: "";
+    position: absolute;
+    width: 30%;
+    height: 1px;
+    top: 0;
+    left: 16px;
+    border-bottom: 4px solid #0d3a57;
+}
+
+.home-text{
+	font-weight: 700; 
+}
+.intro-subheading{
+    line-height: 24px;
+	font-size: 18px;
+}
+.box-title{
+	font-size: 28px;
+	font-weight: 700;
+	color: #0d3a57;	
+	padding-bottom: 20px;
+}
+.box-description{
+    margin-bottom: 34px;
+    font-size: 18px;
+}
+img.centered{
+	display: block;
+	margin: 0 auto;
+}
+
+.help-text{
+    font-size: 16px;
+}
