@@ -5,7 +5,7 @@
                 <div class="col-lg-6 col-md-6 col-sm-6">
                     <span>Conteo Electoral 2015</span>
 
-                    <h1 class="home-text">Contemos Nosotros</h1>
+                    <h1 class="home-text" style="margin-top: 0;">Contemos Nosotros</h1>
 
                     <p class="intro-subheading"><strong>#ContemosNosotros</strong> es una herramienta
                         <a href="http://es.wikipedia.org/wiki/Crowdsourcing" target="_blank">Crowd-sourced</a>,
