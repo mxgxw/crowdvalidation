@@ -12,25 +12,25 @@
     #wordcloud svg {
         width: 600px;
         height: 400px;
+        max-width: 100%;
         margin: 0 auto;
     }
 </style>
-<div class="row">
-    <div class="col-sm-10 col-sm-offset-1">
-        <h1>Contemos Nosotros</h1>
+<div class="container">
+    <h1>Contemos Nosotros</h1>
 
-        <h2 class="chart--headline">Conteo de actas totalmente anónimo, distribuido y abierto. </h2>
+    <h2 class="chart--headline">Conteo de actas totalmente anónimo, distribuido y abierto. </h2>
 
-        <p>Contemos Nosotros es un ejemplo de desarrollo abierto y colaborativo, muchos de los participantes en
-            este proyecto nisiquiera hemos tenido la oportunidad de conocernos en persona.<br/><br/>
-            Sin embargo este espacio lo dejamos para mencionar y agradecer a todos los que han colaborado en el
-            desarrollo inicial y la promoción de esta plataforma. <br/><br/>También agradecemos de manera muy especial
-            a los más de mil usuarios anónimos que hacen que esta plataforma funcione ingresando los números
-            de los conteos.</p>
-        <div id="wordcloud"></div>
-        <p>Los nombres en el mapa de palabras anterior no se presentan en ningún orden específico, presiona F5 o
-            el botón refrescar de tu navegador para ver más nombres</p>
-    </div>
+    <p>Contemos Nosotros es un ejemplo de desarrollo abierto y colaborativo, muchos de los participantes en
+        este proyecto nisiquiera hemos tenido la oportunidad de conocernos en persona.<br/><br/>
+        Sin embargo este espacio lo dejamos para mencionar y agradecer a todos los que han colaborado en el
+        desarrollo inicial y la promoción de esta plataforma. <br/><br/>También agradecemos de manera muy especial
+        a los más de mil usuarios anónimos que hacen que esta plataforma funcione ingresando los números
+        de los conteos.</p>
+
+    <div id="wordcloud"></div>
+    <p>Los nombres en el mapa de palabras anterior no se presentan en ningún orden específico, presiona F5 o
+        el botón refrescar de tu navegador para ver más nombres</p>
 </div>
 
 <?php echo $this->Html->script('http://d3js.org/d3.v3.min.js'); ?>
