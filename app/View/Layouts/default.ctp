@@ -54,7 +54,7 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
     <![endif]-->
 
 </head>
-<body>
+<body class="<?php echo $this->params->params['controller'].'_'.$this->params->params['action']?>">
 <!-- Navbar -->
 <div id="main-header">
     <?php echo $this->element('nav')?>
