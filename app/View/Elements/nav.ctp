@@ -20,7 +20,7 @@
                 <li class="<?php if($this->viewVars['page'] == 'faq') { echo 'active'; } ?>">
                     <?php echo $this->Html->link('FAQ', '/pages/faq'); ?>
                 </li>
-                <li class="dropdown <?php if($this->viewVars['page'] == 'alcaldes' || 'diputados' || 'parlacen') { echo 'active'; } ?>">
+                <li class="dropdown <?php if($this->viewVars['page'] == 'alcaldes'||'diputados'||'parlacen') { echo 'active'; } ?>">
                     <a href="bootstrap-elements.html" data-target="#" class="dropdown-toggle"
                        data-toggle="dropdown">Resultados <b class="caret"></b></a>
                     <ul class="dropdown-menu">
