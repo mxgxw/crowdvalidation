@@ -13,8 +13,9 @@
                         Juntas Electorales enviadas al TSE. </p>
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-6">
-                    <div class="imgbox">
-                        <?php echo $this->Html->image('landing-box.png', array('alt' => 'Elecciones')); ?>
+                    <div class="imgbox text-center">
+                        <?php echo $this->Html->image('landing-box.png', array('alt' => 'Elecciones',
+                            'class' => 'votos-box')); ?>
                     </div>
                 </div>
             </div>
