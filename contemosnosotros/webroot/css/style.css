@@ -120,7 +120,7 @@ span{color:#6d6d6d; font-size: 1.1em}
 
 	height: 280px;
 
-	max-width: 550px;
+	/*max-width: 550px;*/
 
 }
 
@@ -131,10 +131,10 @@ border-color: #013494;
 }
 .btn-danger:hover, .btn-danger:focus, .btn-danger:active, .btn-danger.active, .open .dropdown-toggle.btn-danger{background-color: #1759d5; border-color: #013494;}
 
-.inpt{border-color: 1px solid #0691f2; height:25px;}
+.inpt{border-color: 1px solid #0691f2; /*height:25px;*/}
 
 .inpt img{margin: 0 auto;
-width: 200px;
+/*width: 200px;*/
 display: block;}
 
 
