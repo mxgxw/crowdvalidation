@@ -31,7 +31,9 @@
                	<input type="text" placeholder="Digitar números de acta" id="txtCounter" autofocus="" maxlength="3">
               </div>             
                
-              <div class="centrado"> <button class="btn btn-danger btn-lg" id="btnSend">Enviar Acta</button>
+              <div class="centrado"> 
+			  <button class="btn btn-danger btn-lg" id="btnSend">Enviar Acta</button> 
+			  <button class="btn btn-danger btn-lg" id="btnReport">Ilegible</button>
               </div>
             </div>
           </div>
