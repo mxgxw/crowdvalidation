@@ -61,7 +61,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
                   <span class="icon-bar"></span>
                   <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="http://contemosnosotros.org/"><img alt="Elecciones 2018" src="/img/banner.jpg"></a>
+                <a class="navbar-brand" href="http://contemosnosotros.org/"><img alt="Elecciones 2018" src="img/banner.jpg"></a>
               </div>
 
               <div class="collapse navbar-collapse  pull-right" id="bs-example-navbar-collapse-1">
