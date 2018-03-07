@@ -76,5 +76,50 @@ class ValidaController extends AppController {
         exit(); // TODO: Remove. 
     }
 
-    // Cleanup
+    public function conteo() {
+        header('Content-Type: application/json');
+        if(isset($_POST['token'])&&
+           isset($_POST['value'])&&
+           is_numeric($_POST['value'])) {
+            $hashtable = TableRegistry::get('HashTable');
+            $query = $hashtable->find('all')
+                ->where([
+                    'AND'=>array(
+                        'hashvalue' => $_POST['token'],
+                        'valid_until > NOW()'
+                    )
+                ]);
+            $data = $query->first();
+      
+            if($data!==null) {
+                $digitaciones = TableRegistry::get('Digitaciones');
+                $digitacion = $digitaciones->newEntity();
+	        $votos = floatval($_POST['value']);
+
+                if($votos>=0 && $votos<=500) {
+                    $digitacion->acta_id = $data->acta;
+                    $digitacion->diputado = $data->diputado;
+                    $digitacion->fecha = date("Y-m-d H:i:s");
+                    $digitacion->digitado = $votos;
+                    $digitacion->origin = $_SERVER['REMOTE_ADDR'];
+
+	            if($digitaciones->save($digitacion)) {
+                        //$data->hashvalue = null;
+                        //$data->valid_until = null;
+                        //$hashtable->save($data);
+	                echo json_encode(array("Status"=>"OK"));
+	            } else {
+	                echo json_encode(array("Error"=>"Cannot save data."));
+	            }
+	        } else {
+	            echo json_encode(array("Error"=>"Invalid range for value."));
+	        }
+            } else {
+                echo json_encode(array("Error"=>"Invalid or expired token."));
+            }
+        } else {
+            echo json_encode(array("Error"=>"Invalid token or value."));
+        }
+        exit(); // Remove
+    }
 }
