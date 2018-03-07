@@ -3,11 +3,13 @@ namespace App\Controller;
 
 use Cake\ORM\TableRegistry;
 use App\Controller\AppController;
+use Cake\Network\Exception\NotFoundException;
 
 class ValidaController extends AppController {
 
+    // Generates a token for each request
     public function index() {
-        //header("Content-type: application/json");
+        header("Content-type: application/json");
 	$hashtable = TableRegistry::get('HashTable');
         $query = $hashtable->find('all')
             ->where([
@@ -48,6 +50,31 @@ class ValidaController extends AppController {
         } else {
             echo json_encode(array("Error"=>"Cannot generate token"));
         }
-        exit();
+        exit(); // TODO: Remove
     }
+
+    // Image selector
+    public function image($hash) {
+        if($hash===null) {
+            throw new NotFoundException();
+            return;
+        }
+ 
+        $hashtable = TableRegistry::get('HashTable');
+
+        $query = $hashtable->find('all')
+            ->where(['hashvalue'=>$hash]);
+
+        $img = $query->first();
+
+        if($img===null) {
+            throw new NotFoundException();
+            return;
+        }
+        header('Content-type: image/jpg');
+        echo file_get_contents("./jrv/actas/".sprintf("%06d",$img->acta)."-".$img->diputado.".jpg");
+        exit(); // TODO: Remove. 
+    }
+
+    // Cleanup
 }
