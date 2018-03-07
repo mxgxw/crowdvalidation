@@ -71,8 +71,8 @@ class ValidaController extends AppController {
             throw new NotFoundException();
             return;
         }
-        header('Content-type: image/jpg');
-        echo file_get_contents("./jrv/actas/".sprintf("%06d",$img->acta)."-".$img->diputado.".jpg");
+        header('Content-type: image/png');
+        echo file_get_contents("./jrv/actas/".sprintf("%05d",$img->acta)."-".$img->diputado.".png");
         exit(); // TODO: Remove. 
     }
 
