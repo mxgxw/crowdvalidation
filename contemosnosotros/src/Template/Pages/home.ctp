@@ -15,7 +15,7 @@
         <div class="row datos">
           <div class="row">
             <div class="col-sm-10 col-sm-offset-1">
-              <p class="centrado">Digite únicamente los números (sin guiones) que observa en la imagen, escribalos en el cuadro de texto y luego presiona "Enviar Acta" o la tecla [Enter].</p>
+              <p class="centrado">Digite únicamente los números (sin guiones) que observa en la imagen, escribalos en el cuadro de texto y luego presiona "Enviar Acta" o la tecla [Enter].<strong><h2>ESTO ES SOLO UNA PRUEBA.</h2></strong></p>
             </div>
           </div>
 
