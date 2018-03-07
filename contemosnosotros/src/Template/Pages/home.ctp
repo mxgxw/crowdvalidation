@@ -1,20 +1,21 @@
-        <div class="row">       
+        <div class="row">
           <div class="col-sm-10 col-sm-offset-1">
             <h1>Conteo electoral 2018</h1>
-            <p>Desarrollo de herramienta crowd-sourced, totalmente anonima, capaz de verificar los conteos que se encuentran en las actas de las Juntas Electorales Enviadas al TSE</p>
+            <p>Es el desarrollo de una herramienta crowd-sourced o de colaboración abierta distribuida, totalmente anonima, capaz de verificar los conteos que se encuentran en las actas de las Juntas Electorales enviadas al TSE (Tribunal Supremo Electoral) de la República de El Salvador.</p>
 
-          </div>       
+          </div>
           <div id = "alert-box" class=" col-sm-10 col-sm-offset-1 alert alert-success fade in" style = "display:none;margin-bottom: -32px;">
-            <button type="button" id = "alert-close-btn" class="close ">×/button>
-            <center><strong>Acta Ingresada!!!</strong></center>
+            <button type="button" id = "alert-close-btn" class="close">
+              <!--×/button-->
+            <center><strong>¡¡¡Acta Ingresada!!!</strong></center>
           </div>
         </div>
 
-        
+
         <div class="row datos">
           <div class="row">
             <div class="col-sm-10 col-sm-offset-1">
-              <p class="centrado">Digite los Numeros que en la imagen se presentan en el cuadro de texto y luego presiona "Enviar Acta" o la tecla [Enter].</p>
+              <p class="centrado">Digite únicamente los números (sin guiones) que observa en la imagen, escribalos en el cuadro de texto y luego presiona "Enviar Acta" o la tecla [Enter].</p>
             </div>
           </div>
 
@@ -22,14 +23,14 @@
             <div class="row">
               <div class="inpt" id="imgContainer">
               </div>
-                             
+
             </div>
 
             <div class="row inputt">
               <div class="centrado">
                	<input type="text" placeholder="Digitar numeros de acta" id="txtCounter" autofocus="" maxlength="3">
-              </div>             
-               
+              </div>
+
               <div class="centrado"> <button class="btn btn-danger btn-lg" id="btnSend">Enviar Acta</button>
               </div>
             </div>
@@ -38,7 +39,7 @@
         </div>
 		<script>
     $( document ).ready(function() {
-	
+
 $( ".inicio" ).addClass( "active" );
 
 $("#txtCounter").focusin(function() {
