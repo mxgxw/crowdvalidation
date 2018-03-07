@@ -120,7 +120,7 @@ span{color:#6d6d6d; font-size: 1.1em}
 
 	height: 280px;
 
-	width: 350px;
+	max-width: 550px;
 
 }
 
