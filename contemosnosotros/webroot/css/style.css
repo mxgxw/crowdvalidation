@@ -134,8 +134,8 @@ border-color: #013494;
 .inpt{border-color: 1px solid #0691f2; /*height:25px;*/}
 
 .inpt img{margin: 0 auto;
-/*width: 200px;*/
-display: block;}
+max-width: 100%;
+display: block;} 
 
 
 input {
