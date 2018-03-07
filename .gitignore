@@ -13,3 +13,4 @@ contemosnosotros/index.php
 contemosnosotros/phpunit.xml.dist
 contemosnosotros/plugins/
 contemosnosotros/tests/
+.*~
