@@ -144,7 +144,7 @@ padding: 5px;
 background: rgba(255,255,255,1);
 margin: 0 0 10px 0;
 font-size: 25px;
-width: 300px;
+max-width: 300px;
 text-align: center;
 }
 .alert-success {
