@@ -20,7 +20,7 @@ Lo anterior significa que los resultados a pesar de ser parciales, estarían en 
 El resultado publicado por TSE arroja 12,836. A pesar de ser un set parcial, las cifras tienden a acercarse a los resultados oficiales.
 
 ## Notas finales:
-Con esta prueba ContemosNosotros.org demuestra sus capacidades para funcionar como herramienta de controlaría ciudadana. Luego de esta validación se procede a configurar la plataforma de producción para dar inicio a la digitación distribuida de las preferencias electorales en base a la información pública disponible de las actas escaneadas de las JRV.
+Con esta prueba ContemosNosotros.org demuestra sus capacidades para funcionar como herramienta de contraloría ciudadana. Luego de esta validación se procede a configurar la plataforma de producción para dar inicio a la digitación distribuida de las preferencias electorales en base a la información pública disponible de las actas escaneadas de las JRV.
 
 ## Archivos de datos:
 En el directorio que contiene este README puede encontrar DUMP de SQL y las consultas utilizadas para generar las estadisticas antes mencionadas.
