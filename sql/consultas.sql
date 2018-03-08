@@ -12,4 +12,4 @@ GROUP BY
     `diputado`,
     `digitado`
 HAVING
-    `freq`>3
+    `freq`>=3

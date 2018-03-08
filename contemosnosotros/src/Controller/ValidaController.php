@@ -76,6 +76,32 @@ class ValidaController extends AppController {
         exit(); // TODO: Remove. 
     }
 
+    // Sets a token as invalid
+    public function invalida() {
+        header('Content-Type: application/json');
+        if(isset($_POST['token'])) {
+            $hashtable = TableRegistry::get('HashTable');
+            $query = $hashtable->find('all')
+                ->where([
+                    'hashvalue' => $_POST['token']
+                ]);
+            $data = $query->first();
+            if($data!==null) {
+                $data->ilegible = 1;
+                if($hashtable->save($data)) {
+                    echo json_encode(array("Status"=>"OK"));
+                } else {
+                    echo json_encode(array("Error"=>"No se pudo registrar el T&oacute;ken"));
+                }
+            } else {
+                echo json_encode(array("Error"=>"T&oacute;ken inv&aacute;lido."));
+            }
+        } else {
+            echo json_encode(array("Error"=>"T&oacute;ken o valor inv&aacute;lido."));
+        }
+        exit(); // TODO: Remove.
+    }
+
     public function conteo() {
         header('Content-Type: application/json');
         if(isset($_POST['token'])&&
@@ -109,16 +135,16 @@ class ValidaController extends AppController {
                         //$hashtable->save($data);
 	                echo json_encode(array("Status"=>"OK"));
 	            } else {
-	                echo json_encode(array("Error"=>"Cannot save data."));
+	                echo json_encode(array("Error"=>"No se guardo el dato."));
 	            }
 	        } else {
-	            echo json_encode(array("Error"=>"Invalid range for value."));
+	            echo json_encode(array("Error"=>"Rango de votos inv&aacute;lido."));
 	        }
             } else {
-                echo json_encode(array("Error"=>"Invalid or expired token."));
+                echo json_encode(array("Error"=>"La imagen ya expir&oacute;."));
             }
         } else {
-            echo json_encode(array("Error"=>"Invalid token or value."));
+            echo json_encode(array("Error"=>"T&oacute;ken o valor inv&aacute;lido."));
         }
         exit(); // Remove
     }

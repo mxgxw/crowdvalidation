@@ -66,6 +66,30 @@ function loadNew() {
     $('#txtCounter').val("");
   })
 }
+function sendReport() {
+    if(token!=0) {
+      $.ajax({
+        url: "./valida/invalida/",
+        type: 'POST',
+        data: { token: token }
+      }).done(function( data ) {
+        if(data.Status) {
+          $("#alert-box").show()
+          window.setTimeout(function () {
+            $("#alert-box").hide();
+          }, 3000);
+          $('#txtCounter').val("");
+          loadNew();
+        }
+        if(data.Error) {
+          window.alert("Error: "+data.Error);
+        }
+        $("#btnReport").removeAttr("disabled");
+        $("#btnSend").removeAttr("disabled");
+        $("#btnSend").text("Enviar Acta")
+      })
+    }
+}
 function sendResult() {
     if(token!=0) {
       $.ajax({
@@ -93,9 +117,16 @@ $(function () {
   $("#alert-close-btn").on("click", function(){
     $("#alert-box").hide();
   });
+  $('#btnReport').click(function () {
+    $("#btnReport").attr("disabled", "disabled");
+    $("#btnSend").attr("disabled", "disabled");
+    $("#btnSend").text("Reportando Acta....");
+    sendReport();
+  });
+
   $('#btnSend').click(function () {
     $("#btnSend").attr("disabled", "disabled");
-    $("#btnSend").text("Enviando Acta....")
+    $("#btnSend").text("Enviando Acta....");
     counter = $("#txtCounter").val();
     if(counter.indexOf("-")>=0 || counter.indexOf("_")>=0){
       window.alert("No ingrese guiones");
@@ -103,7 +134,7 @@ $(function () {
       $("#btnSend").text("Enviar Acta");
       return
     }
-    sendResult();imgContainer
+    sendResult();
   });
   $(document).keypress(function(e) {
     if(e.which == 13) {
