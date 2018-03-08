@@ -35,7 +35,11 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     <?= $this->fetch('css') ?>
     <?= $this->fetch('script') ?>
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> 
+    <link href="style.css" rel="stylesheet">
+
     <?= $this->Html->css('style.css') ?>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -44,58 +48,42 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 </head>
 <body>
-      <div class="row">
-        <nav class="navbar navbar-inverse" role="navigation">
-          <div class="container">
-            <div class="container-fluid">
-              <!-- Brand and toggle get grouped for better mobile display -->
-              <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                  <span class="sr-only">Toggle navigation</span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="http://contemosnosotros.org/"><img alt="Elecciones 2018" src="img/banner.jpg"></a>
-              </div>
+  <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="#"><img class="logo" src="img/banner.jpg" alt="Contemos Nosotros 2018"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-              <div class="collapse navbar-collapse  pull-right" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                  <li class="inicio"><a href="http://contemosnosotros.org/">Inicio</a></li><!--
-                  <li class="resultados"><a href="http://contemosnosotros.org/pages/resultados">Resultados</a></li>
-                  <li class="faq"><a href="http://contemosnosotros.org/pages/faq">FAQ</a></li>
-                  <li class="acercade"><a href="http://contemosnosotros.org/pages/acercade">Acerca de Nosotros</a></li>
-                  <li class="agradecimientos"><a href="http://contemosnosotros.org/pages/agradecimientos">Agradecimientos</a></li>-->
-                </ul>                  
-              </div>
-            </div>
-          </div>
-        </nav>
-      </div>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item inicio">
+                    <a class="nav-link" href="/">Inicio
+                        <span class="sr-only">(actual)</span>
+                    </a>
+                </li>
+
+                <li class="nav-item disabled">
+                    <a class="nav-link" href="#">Manifesto</a>
+                </li>
+        </div>
+    </nav>
       <div class="container info">
         <?= $this->Flash->render() ?>
         <?= $this->fetch('content') ?>
       </div>
     </div>
-    <footer class="container">
-    	<ul class="">
-                  <li class="inicio"><a href="http://contemosnosotros.org/">Inicio</a></li>
-                 <!-- <li class="resultados"><a href="http://contemosnosotros.org/pages/resultados">Resultados</a></li>
-                  <li class="faq"><a href="http://contemosnosotros.org/pages/faq">FAQ</a></li>
-                  <li class="acercade"><a href="http://contemosnosotros.org/pages/acercade">Acerca de Nosotros</a></li>
-                  <li class="acercade"><a href="http://contemosnosotros.org/pages/agradecimientos">Agradecimientos</a></li>-->
-                </ul> 
-       <!--<ul class="">
-                  <li><a href="https://github.com/mxgxw/crowdvalidation" target="_blank"><img alt="github" src="/img/github.png"> Crowdvalidation</a></li>
-                  <li><a href="https://gist.github.com/hkadejo/9522141" target="_blank"><img alt="github" src="/img/github.png"> Corte de Actas</a></li>
-                  <li><a href="http://contemosnosotros.org/app/webroot/sqldumps/" target="_blank"><img alt="filedir" src="/img/github.png"> Base de datos (DUMP SQL)</a></li>
-                </ul>  -->
-    </footer>
-   <!-- AddThis Smart Layers BEGIN -->
+    
+    <footer class="footer">
+      <div class="container">
+        <a href="/">Inicio</a> 
+      </div>
+    </footer>   
+
+    <!-- AddThis Smart Layers BEGIN -->
 <!-- Go to http://www.addthis.com/get/smart-layers to customize -->
 <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5321ea53081e0c25"></script>
 <script type="text/javascript">
@@ -107,6 +95,10 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     }   
   });
 </script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 <!-- AddThis Smart Layers END -->
 
 
