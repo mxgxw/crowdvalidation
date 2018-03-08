@@ -3,6 +3,7 @@ contemosnosotros/.gitattributes
 contemosnosotros/.github/
 contemosnosotros/.gitignore
 contemosnosotros/.htaccess
+contemosnosotros/webroot/.htaccess
 contemosnosotros/.travis.yml
 contemosnosotros/README.md
 contemosnosotros/bin/
