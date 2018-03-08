@@ -48,7 +48,7 @@ class ValidaController extends AppController {
         if($hashtable->save($nextImg)) {
             echo json_encode(array("token"=>$nextImg->hashvalue));
         } else {
-            echo json_encode(array("Error"=>"Cannot generate token"));
+            echo json_encode(array("Error"=>"No se puede generar el tóken"));
         }
         exit(); // TODO: Remove
     }
@@ -91,13 +91,13 @@ class ValidaController extends AppController {
                 if($hashtable->save($data)) {
                     echo json_encode(array("Status"=>"OK"));
                 } else {
-                    echo json_encode(array("Error"=>"No se pudo registrar el T&oacute;ken"));
+                    echo json_encode(array("Error"=>"No se pudo registrar el Tóken"));
                 }
             } else {
-                echo json_encode(array("Error"=>"T&oacute;ken inv&aacute;lido."));
+                echo json_encode(array("Error"=>"Tóken inválido"));
             }
         } else {
-            echo json_encode(array("Error"=>"T&oacute;ken o valor inv&aacute;lido."));
+            echo json_encode(array("Error"=>"Tóken inválido"));
         }
         exit(); // TODO: Remove.
     }
@@ -138,13 +138,13 @@ class ValidaController extends AppController {
 	                echo json_encode(array("Error"=>"No se guardo el dato."));
 	            }
 	        } else {
-	            echo json_encode(array("Error"=>"Rango de votos inv&aacute;lido."));
+	            echo json_encode(array("Error"=>"Rango de votos inválido"));
 	        }
             } else {
-                echo json_encode(array("Error"=>"La imagen ya expir&oacute;."));
+                echo json_encode(array("Error"=>"La imagen ya expiró."));
             }
         } else {
-            echo json_encode(array("Error"=>"T&oacute;ken o valor inv&aacute;lido."));
+            echo json_encode(array("Error"=>"Tóken o valor inválido"));
         }
         exit(); // Remove
     }

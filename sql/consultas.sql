@@ -13,3 +13,6 @@ GROUP BY
     `digitado`
 HAVING
     `freq`>=3
+
+--System Reset
+UPDATE `hash_table` SET `hashvalue`=NULL,`valid_until`=NULL,`completed`=0,`ilegible`=0 WHERE 1=1
