@@ -5,9 +5,9 @@
 
           </div>
           <div id = "alert-box" class=" col-sm-10 col-sm-offset-1 alert alert-success fade in" style = "display:none;margin-bottom: -32px;">
-            <button type="button" id = "alert-close-btn" class="close">
+            <button type="button" id = "alert-close-btn" class="close centrado">
               <!--×/button-->
-            <center><strong>¡¡¡Acta Ingresada!!!</strong></center>
+            <strong>¡Acta Ingresada Correctamente!</strong>
           </div>
         </div>
 
@@ -15,7 +15,11 @@
         <div class="row datos">
           <div class="row">
             <div class="col-sm-10 col-sm-offset-1">
-              <p class="centrado">Digite únicamente los números (sin guiones) que observa en la imagen, escribalos en el cuadro de texto y luego presiona "Enviar Acta" o la tecla [Enter].</p>
+              <p class="centrado">
+              Digite únicamente los números (sin guiones) que observa en la imagen,
+              si aparece vacio o solo guiones digite "0".
+              <br> Escriba el número en el cuadro de texto y luego presione
+              <b>"Enviar Acta"</b> o la tecla <b>[Enter]</b>.</p>
             </div>
           </div>
 
