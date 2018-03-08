@@ -7,10 +7,6 @@ contemosnosotros/webroot/jrv/
 contemosnosotros/webroot/.htaccess
 contemosnosotros/.travis.yml
 contemosnosotros/README.md
-contemosnosotros/bin/
+contemosnosotros/bin
 contemosnosotros/config/app.php
-contemosnosotros/index.php
-contemosnosotros/phpunit.xml.dist
-contemosnosotros/plugins/
-contemosnosotros/tests/
 .*~
