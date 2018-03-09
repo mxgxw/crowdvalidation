@@ -51,7 +51,18 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg navbar-dark">
+  <div class="row">
+        <nav class="navbar navbar-inverse" role="navigation">
+          <div class="container">
+            <div class="container-fluid">
+              <!-- Brand and toggle get grouped for better mobile display -->
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
         <a class="navbar-brand" href="#">
          <?= $this->Html->image('banner.jpg', ['class' => 'logo', 'alt' => 'Contemos Nosotros 2018']); ?>
         </a>
@@ -68,9 +79,12 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
                   <li class="acercade"><a href="http://contemosnosotros.org/pages/acercade">Acerca de Nosotros</a></li>
                   
                   -->
-                </ul> 
-        </div>
-    </nav>
+                </ul>                  
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
       <div class="container info">
         <?= $this->Flash->render() ?>
         <?= $this->fetch('content') ?>
