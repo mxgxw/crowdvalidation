@@ -75,8 +75,12 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
                   <li class="acercade">
                   <?= $this->Html->link('Manifiesto', '/pages/manifiesto'); ?>	
                   </li>
-                  <li class="faq"><a href="http://contemosnosotros.org/pages/faq">FAQ</a></li>
-                  <li class="agradecimientos"><a href="http://contemosnosotros.org/pages/agradecimientos">Agradecimientos</a></li>
+                  <li class="faq">
+                  <?= $this->Html->link('FAQ', '/pages/faq'); ?>
+                  </li>
+                  <li class="agradecimientos">
+                  <?= $this->Html->link('Agradecimientos', '/pages/agradecimientos'); ?>
+                  </li>
                   <!--
                   <li class="resultados"><a href="http://contemosnosotros.org/pages/resultados">Resultados</a></li>
                   <li class="acercade"><a href="http://contemosnosotros.org/pages/acercade">Acerca de Nosotros</a></li>
