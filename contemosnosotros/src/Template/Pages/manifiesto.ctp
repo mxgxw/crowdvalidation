@@ -24,7 +24,7 @@
 <p><a href="http://contemosnosotros.org/app/webroot/sqldumps/">http://contemosnosotros.org/app/webroot/sqldumps/</a></p>
 <p>Esperamos que esta herramienta sea de su interés y agradecemos a todas las personas que han colaborado con el desarrollo y el uso de la misma.</p>
 	
-<p>TL;DR YOLO</p>
+
 
 </div> </div>
 <script>

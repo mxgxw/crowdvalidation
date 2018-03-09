@@ -46,7 +46,7 @@ El sistema busca validar de forma anónima la sumatoria de los resultados en las
 <p>¿Por qué tenemos que digitar manualmente y no lo hacen automatizado?</p>
 <blockquote>Dada la naturaleza del registro de los totales de votos en las papeletas que consta en que los encargados de las JRV escriban a mano los totales contados de votos, es muy costoso y poco confiable delegar a un sistema computarizado la tarea de leer los datos manuscritos e interpretarlos como válidos así que se ha creado una forma de validación manual comunitaria anónima para que cualquier persona pueda validar secciones de las actas de forma aleatoria y sin favorecer a nadie ya que sólo se presenta al usuario el número del total de los votos en esa casilla.</blockquote>
 
-<p>¿Dónde veo los resultados?</p>
+<!--<p>¿Dónde veo los resultados?</p>-->
 
 
 
