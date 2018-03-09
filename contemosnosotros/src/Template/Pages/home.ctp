@@ -20,7 +20,7 @@
           </div>
           <div class="text-center"> 
 			      <button class="btn btn-primary btn-lg" id="btnSend">Enviar Acta</button> 
-			      <button class="btn btn-danger btn-lg" id="btnReport">Ilegible</button>
+			      <button class="btn btn-danger btn-lg" id="btnReport">Acta Irregular</button>
           </div>
           <div class="text-center">
             <div id="#alert-box" class="alert alert-success alert-dismissible fade show" role="alert" style="display: none;">

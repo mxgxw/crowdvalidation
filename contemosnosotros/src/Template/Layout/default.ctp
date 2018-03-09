@@ -60,16 +60,17 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
         </button>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item inicio">
-                    <a class="nav-link inicio" href="/">Inicio
-                        <span class="sr-only">(actual)</span>
-                    </a>
-                </li>
-
-                <li class="nav-item disabled">
-                    <a class="nav-link" href="#">Manifesto</a>
-                </li>
+            <ul class="nav navbar-nav">
+                  <li class="inicio"><a href="http://contemosnosotros.org/">Inicio</a></li>
+                  <li class="acercade"><a href="http://contemosnosotros.org/pages/manifiesto">Manifiesto</a></li>
+                  <li class="faq"><a href="http://contemosnosotros.org/pages/faq">FAQ</a></li>
+                  <li class="agradecimientos"><a href="http://contemosnosotros.org/pages/agradecimientos">Agradecimientos</a></li>
+                  <!--
+                  <li class="resultados"><a href="http://contemosnosotros.org/pages/resultados">Resultados</a></li>
+                  <li class="acercade"><a href="http://contemosnosotros.org/pages/acercade">Acerca de Nosotros</a></li>
+                  
+                  -->
+                </ul> 
         </div>
     </nav>
       <div class="container info">
@@ -78,10 +79,19 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
       </div>
     </div>
     
-    <footer class="footer">
-      <div class="container">
-        <a href="/">Inicio</a> 
-      </div>
+    <footer class="footer" class="container">
+      <ul class="">
+                  <li class="inicio"><a href="http://contemosnosotros.org/">Inicio</a></li>
+                 <!-- <li class="resultados"><a href="http://contemosnosotros.org/pages/resultados">Resultados</a></li>
+                  <li class="faq"><a href="http://contemosnosotros.org/pages/faq">FAQ</a></li>
+                  <li class="acercade"><a href="http://contemosnosotros.org/pages/acercade">Acerca de Nosotros</a></li>
+                  <li class="acercade"><a href="http://contemosnosotros.org/pages/agradecimientos">Agradecimientos</a></li>-->
+                </ul> 
+       <!--<ul class="">
+                  <li><a href="https://github.com/mxgxw/crowdvalidation" target="_blank"><img alt="github" src="/img/github.png"> Crowdvalidation</a></li>
+                  <li><a href="https://gist.github.com/hkadejo/9522141" target="_blank"><img alt="github" src="/img/github.png"> Corte de Actas</a></li>
+                  <li><a href="http://contemosnosotros.org/app/webroot/sqldumps/" target="_blank"><img alt="filedir" src="/img/github.png"> Base de datos (DUMP SQL)</a></li>
+                </ul>  -->
     </footer>   
 
     <!-- AddThis Smart Layers BEGIN -->
