@@ -51,7 +51,9 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
 </head>
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark">
-        <a class="navbar-brand" href="#"><img class="logo" src="img/banner.jpg" alt="Contemos Nosotros 2018"></a>
+        <a class="navbar-brand" href="#">
+         <?= $this->Html->image('banner.jpg', ['class' => 'logo', 'alt' => 'Contemos Nosotros 2018']); ?>
+        </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
             aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
