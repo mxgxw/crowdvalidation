@@ -3,7 +3,7 @@
 <!-- Add icon library -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-<div class="card">
+<div class="profilecard">
 <?= $this->Html->image('profile-pic-sample.jpg', ['class' => 'profile', 'alt' => 'perfile colaborador']); ?>
   
   <h3>Salvador Corado</h3>
@@ -16,7 +16,7 @@
   <p><button>Contact</button></p>
 </div>
 
-<div class="card">
+<div class="profilecard">
 <?= $this->Html->image('profile-pic-sample.jpg', ['class' => 'profile', 'alt' => 'perfile colaborador']); ?>
   
   <h3>Salvador Corado</h3>
@@ -28,7 +28,7 @@
    
   <p><button>Contact</button></p>
 </div>
-<div class="card">
+<div class="profilecard">
 <?= $this->Html->image('profile-pic-sample.jpg', ['class' => 'profile', 'alt' => 'perfile colaborador']); ?>
   
   <h3>Salvador Corado</h3>
@@ -40,7 +40,7 @@
    
   <p><button>Contact</button></p>
 </div>
-<div class="card">
+<div class="profilecard">
 <?= $this->Html->image('profile-pic-sample.jpg', ['class' => 'profile', 'alt' => 'perfile colaborador']); ?>
   
   <h3>Salvador Corado</h3>
@@ -52,7 +52,7 @@
    
   <p><button>Contact</button></p>
 </div>
-<div class="card">
+<div class="profilecard">
 <?= $this->Html->image('profile-pic-sample.jpg', ['class' => 'profile', 'alt' => 'perfile colaborador']); ?>
   
   <h3>Salvador Corado</h3>
