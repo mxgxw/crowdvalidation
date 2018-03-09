@@ -93,7 +93,59 @@ GROUP BY
   `detalle_diputados`.`dpto_nombre`,
   `detalle_diputados`.`partido_id`,
   `detalle_diputados`.`partido_nombre`
-    
+
+CREATE VIEW `voto_preferencial_certeza` AS
+SELECT
+  `voto_preferencial`.`diputado_id`,
+  `voto_preferencial`.`dpto_id`,
+  `voto_preferencial`.`dpto_nombre`,
+  `voto_preferencial`.`partido_id`,
+  `voto_preferencial`.`partido_nombre`,
+  `voto_preferencial`.`diputado_nombre`,
+  `voto_preferencial`.`marcas`,
+  `actas_disponibles_diputado`.`actas_procesadas` AS `disponibles`,
+  CASE WHEN `actas_procesadas_diputado`.`diputado` IS NULL THEN 0 ELSE `actas_procesadas_diputado`.`diputado` END
+FROM `voto_preferencial` LEFT JOIN `actas_disponibles_diputado` ON
+  `voto_preferencial`.`diputado_id` = `actas_disponibles_diputado`.`diputado`
+  LEFT JOIN `actas_procesadas_diputado` ON 
+  `voto_preferencial`.`diputado_id` = `actas_procesadas_diputado`.`diputado`
+
+CREATE VIEW `voto_preferencial_certeza` AS
+SELECT
+  `voto_preferencial`.`diputado_id`,
+  `voto_preferencial`.`dpto_id`,
+  `voto_preferencial`.`dpto_nombre`,
+  `voto_preferencial`.`partido_id`,
+  `voto_preferencial`.`partido_nombre`,
+  `voto_preferencial`.`diputado_nombre`,
+  `voto_preferencial`.`marcas`,
+  `actas_disponibles_diputado`.`actas_disponibles` AS `disponibles`,
+  (CASE WHEN `actas_procesadas_diputado`.`actas_procesadas` IS NULL THEN 0 ELSE `actas_procesadas_diputado`.`actas_procesadas` END) AS `procesadas`
+FROM `voto_preferencial` LEFT JOIN `actas_disponibles_diputado` ON
+  `voto_preferencial`.`diputado_id` = `actas_disponibles_diputado`.`diputado`
+  LEFT JOIN `actas_procesadas_diputado` ON 
+  `voto_preferencial`.`diputado_id` = `actas_procesadas_diputado`.`diputado`
+
+-- Actas procesadas para diputado.
+CREATE VIEW `actas_procesadas_diputado` AS
+SELECT
+  `mejores_concurrentes`.`diputado`,
+    COUNT(*) as `actas_procesadas`
+FROM
+  `mejores_concurrentes`
+GROUP BY
+  `mejores_concurrentes`.`diputado`
+
+-- Actas procesadas para diputado.
+CREATE VIEW `actas_disponibles_diputado` AS
+SELECT
+  `hash_table`.`diputado`,
+    COUNT(*) as `actas_disponibles`
+FROM
+  `hash_table`
+GROUP BY
+  `hash_table`.`diputado`
+
 -- Anonimizando origenes
 UPDATE `digitaciones` SET `origin`=SHA1(CONCAT('OitdZei3Rm5EQ0MpifPm',`origin`)) WHERE 1
 
