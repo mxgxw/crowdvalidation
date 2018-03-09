@@ -135,7 +135,7 @@ padding: 5px;
 background: rgba(255,255,255,1);
 margin: 0 0 10px 0;
 font-size: 25px;
-max-width: 300px;
+min-width: 300px;
 text-align: center;
 }
 .alert-success {
