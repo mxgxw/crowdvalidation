@@ -13,9 +13,7 @@
 
           <div class="inpt" id="imgContainer"></div>
 
-          <div class="input-group-prepend">
-            <span class="input-group-text">#</span>
-          </div>
+          
           <input type="number" class="form-control" min="0" maxlength="3" id="txtCounter" placeholder="Digitar numeros de acta" aria-label="Numeros del Acta">
           </div>
           <div class="text-center"> 
