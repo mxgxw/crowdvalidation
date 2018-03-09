@@ -3,22 +3,28 @@
 <table id="example" class="display" cellspacing="0" width="100%">
         <thead>
             <tr>
-                <th>Name</th>
-                <th>Position</th>
-                <th>Office</th>
-                <th>Extn.</th>
-                <th>Start date</th>
-                <th>Salary</th>
+                <th>ID diputado</th>
+                <th>ID departamento</th>
+                <th>Departamento</th>
+                <th>ID partido</th>
+                <th>Partido</th>
+                <th>Diputado</th>
+				<th>Marcas</th>
+				<th>Disponibles</th>
+				<th>Procesadas</th>
             </tr>
         </thead>
         <tfoot>
             <tr>
-                <th>Name</th>
-                <th>Position</th>
-                <th>Office</th>
-                <th>Extn.</th>
-                <th>Start date</th>
-                <th>Salary</th>
+                <th>ID diputado</th>
+                <th>ID departamento</th>
+                <th>Departamento</th>
+                <th>ID partido</th>
+                <th>Partido</th>
+                <th>Diputado</th>
+				<th>Marcas</th>
+				<th>Disponibles</th>
+				<th>Procesadas</th>
             </tr>
         </tfoot>
     </table>
