@@ -9,7 +9,7 @@ class ApiController extends AppController {
 
     public function format_array($obj) {
       $out_data = [];
-      foreach($ojb as $data) {
+      foreach($obj as $data) {
         $out_data[] = $data;
       }
       return $out_data;
