@@ -129,7 +129,7 @@ $(function () {
       window.alert("No ingrese guiones");
       $("#btnSend").removeAttr("disabled");
       $("#btnSend").text("Enviar Acta");
-      return
+      
     }
     sendResult();
   });
