@@ -32,12 +32,7 @@
           </div>
 
         </div>
-            <div class="row inputt">
-              <div class="centrado">
-               	<input type="number" placeholder="Digitar numeros de acta" id="txtCounter" autofocus="" maxlength="3">
-              </div>
-
-            </div>
+            
           </div>
         </div>
 		</div>
