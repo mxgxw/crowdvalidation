@@ -16,7 +16,7 @@
           <div class="input-group-prepend">
             <span class="input-group-text">#</span>
           </div>
-          
+          <input type="number" class="form-control" min="0" maxlength="3" id="txtCounter" placeholder="Digitar numeros de acta" aria-label="Numeros del Acta">
           </div>
           <div class="text-center"> 
 			      <button class="btn btn-primary btn-lg" id="btnSend">Enviar Acta</button> 
@@ -32,12 +32,7 @@
           </div>
 
         </div>
-            <div class="row inputt">
-              <div class="centrado">
-               	<input type="number" placeholder="Digitar numeros de acta" id="txtCounter" autofocus="" maxlength="3">
-              </div>
-
-            </div>
+            
           </div>
         </div>
 		</div>
