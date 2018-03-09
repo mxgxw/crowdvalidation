@@ -8,7 +8,6 @@ use Cake\Network\Exception\NotFoundException;
 class ApiController extends AppController {
 
     public function format_array($obj) {
-      echo json_encode($obj);exit();
       $out_data = [];
       foreach($obj as $key=>$data) {
         $out_data[] = $data;
