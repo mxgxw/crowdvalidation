@@ -6,7 +6,7 @@
 <div class="card">
 <?= $this->Html->image('profile-pic-sample.jpg', ['class' => 'profile', 'alt' => 'perfile colaborador']); ?>
   
-  <h1>Salvador Corado</h1>
+  <h3>Salvador Corado</h3>
   <p class="title">Front End Developer UI/UX</p>
   <p>Adobe Certified Web Specialist</p>
   <a href="#"><i class="fa fa-facebook"></i></a>
@@ -19,7 +19,7 @@
 <div class="card">
 <?= $this->Html->image('profile-pic-sample.jpg', ['class' => 'profile', 'alt' => 'perfile colaborador']); ?>
   
-  <h1>Salvador Corado</h1>
+  <h3>Salvador Corado</h3>
   <p class="title">Front End Developer UI/UX</p>
   <p>Adobe Certified Web Specialist</p>
   <a href="#"><i class="fa fa-facebook"></i></a>
@@ -31,7 +31,7 @@
 <div class="card">
 <?= $this->Html->image('profile-pic-sample.jpg', ['class' => 'profile', 'alt' => 'perfile colaborador']); ?>
   
-  <h1>Salvador Corado</h1>
+  <h3>Salvador Corado</h3>
   <p class="title">Front End Developer UI/UX</p>
   <p>Adobe Certified Web Specialist</p>
   <a href="#"><i class="fa fa-facebook"></i></a>
@@ -43,7 +43,7 @@
 <div class="card">
 <?= $this->Html->image('profile-pic-sample.jpg', ['class' => 'profile', 'alt' => 'perfile colaborador']); ?>
   
-  <h1>Salvador Corado</h1>
+  <h3>Salvador Corado</h3>
   <p class="title">Front End Developer UI/UX</p>
   <p>Adobe Certified Web Specialist</p>
   <a href="#"><i class="fa fa-facebook"></i></a>
@@ -55,7 +55,7 @@
 <div class="card">
 <?= $this->Html->image('profile-pic-sample.jpg', ['class' => 'profile', 'alt' => 'perfile colaborador']); ?>
   
-  <h1>Salvador Corado</h1>
+  <h3>Salvador Corado</h3>
   <p class="title">Front End Developer UI/UX</p>
   <p>Adobe Certified Web Specialist</p>
   <a href="#"><i class="fa fa-facebook"></i></a>
