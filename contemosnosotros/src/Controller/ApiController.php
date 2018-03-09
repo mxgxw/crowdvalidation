@@ -42,8 +42,4 @@ class ApiController extends AppController {
 
         exit(); // TODO: Remove
     }
-
-    public funcion listaactas() {
-    
-    }
 }
