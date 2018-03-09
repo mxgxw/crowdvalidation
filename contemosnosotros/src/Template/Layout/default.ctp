@@ -62,7 +62,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item inicio">
-                    <a class="nav-link" href="/">Inicio
+                    <a class="nav-link inicio" href="/">Inicio
                         <span class="sr-only">(actual)</span>
                     </a>
                 </li>

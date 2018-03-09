@@ -29,6 +29,6 @@
 </div> </div>
 <script>
  $( document ).ready(function() {	
-   $( ".acercade" ).addClass( "active" );
+   $( ".manifiesto" ).addClass( "active" );
  });
 </script>

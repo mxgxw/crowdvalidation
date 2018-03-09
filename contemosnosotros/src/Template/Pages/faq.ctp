@@ -5,6 +5,6 @@
 </div> </div>
 <script>
  $( document ).ready(function() {	
-   $( ".acercade" ).addClass( "active" );
+   $( ".faq" ).addClass( "active" );
  });
 </script>
