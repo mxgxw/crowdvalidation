@@ -23,7 +23,7 @@
 			      <button class="btn btn-danger btn-lg" id="btnReport">Ilegible</button>
           </div>
           <div class="text-center">
-            <div id="#alert-box" class="alert alert-success alert-dismissible fade show" role="alert" style="display: none;">
+            <div id="alert-box" class="alert alert-success alert-dismissible fade show" role="alert" style="display: none;">
               Acta ingresada <strong>correctamente. </strong>
               <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                 <span aria-hidden="true">&times;</span>

@@ -2,6 +2,7 @@ body {
 	background-color: #E2E2E2;
 	font-family: Roboto;
 	background-image:url('../img/bg.jpg');
+	background-size: cover;
 	background-repeat:no-repeat;
 	background-position: center top;
 }
@@ -66,7 +67,7 @@ nav > a > img.logo {
 }
 
 .inpt img{
-	margin: 0 auto;
+	margin: 2rem auto;
 	max-width: 100%;
 	display: block;
 } 
