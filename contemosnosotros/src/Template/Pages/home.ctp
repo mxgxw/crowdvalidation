@@ -14,7 +14,7 @@
 
           <div class="row inputt">
               <div class="centrado">
-               	<input type="number" placeholder="Digitar numeros de acta" id="txtCounter" autofocus="" pattern="[0-9]{3}" required min="0" max="999" >
+               	<input type="number" placeholder="Digitar numeros de acta" id="txtCounter" pattern="[0-9]{3}" required min="0" max="999" >
               </div>
           
           </div>
@@ -40,13 +40,8 @@
         <script type="text/javascript">
         $( document ).ready(function() {
           $( ".inicio" ).addClass( "active" );
-          
-          $("#txtCounter").focusin(function() {
-            $( this ).attr("placeholder","");
-            }).focusout(function(){
-              $( this ).attr("placeholder","Digitar numeros de acta");
-              });
-              });
+          $( "#txtCounter" ).focus();
+          });
         </script>
 
 <script type="text/javascript">
@@ -118,7 +113,7 @@ $(function () {
     $("#btnSend").attr("disabled", "disabled");
     $("#btnSend").text("Reportando Acta....");
     sendReport();
-    $("#txtCounter").focus();
+    $( "#txtCounter" ).focus();
   });
 
   $('#btnSend').click(function () {
@@ -132,6 +127,7 @@ $(function () {
       
     }
     sendResult();
+    $( "#txtCounter" ).focus();
   });
   $(document).keypress(function(e) {
     if(e.which == 13) {
