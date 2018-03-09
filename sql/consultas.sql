@@ -60,10 +60,26 @@ FROM
 WHERE
   `ambiguos`.`diputado` IS NULL
 
-CREATE VIEW 
+CREATE VIEW `detalle_diputados` AS
+SELECT
+ `departamentos`.`id` as `dpto_id`,
+ `departamentos`.`nombre` as `dpto_nombre`,
+ `partidos`.`id` as `partido_id`,
+ `partidos`.`nombre` as `partido_nombre`,
+ `diputados`.`id` as `diputado_id`,
+ `diputados`.`nombre` as `diputado_nombre`
+FROM `diputados` INNER JOIN `departamentos` ON
+  `diputados`.`departamento_id` = `departamentos`.`id`
+    INNER JOIN `partidos` ON
+    `diputados`.`partido_id` = `partidos`.`id`
 
 -- Anonimizando origenes
 UPDATE `digitaciones` SET `origin`=SHA1(CONCAT('OitdZei3Rm5EQ0MpifPm',`origin`)) WHERE 1
 
+-- Limpieza de valores
+UPDATE `hash_table` SET `hashvalue`=NULL,`valid_until`=NULL,`ilegible`=0 WHERE 1
+
 -- Indice para acelerar consultas
 ALTER TABLE `hash_table` ADD `random` BIGINT NULL AFTER `ilegible`, ADD INDEX `rnd_idx` (`random`);
+-- Set Random IDX
+UPDATE `hash_table` SET `random`=RAND()*4000000 WHERE 1
