@@ -7,6 +7,13 @@ use Cake\Network\Exception\NotFoundException;
 
 class ApiController extends AppController {
 
+    private function format_array($obj) {
+      $out_data = [];
+      foreach($ojb as $data) {
+        $out_data[] = $data
+      }
+      return $out_data;
+    }
     // Generates a token for each request
     public function index() {
         header("Content-type: application/json");
@@ -38,7 +45,7 @@ class ApiController extends AppController {
         $query = $hashtable->find('all');
         $results = $query->all();
 
-        echo json_encode(array("data"=>$results->toArray()));
+        echo json_encode(array("data"=>map(format_array,$results->toArray())));
 
         exit(); // TODO: Remove
     }
