@@ -66,6 +66,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
         <a class="navbar-brand" href="#">
          <?= $this->Html->image('banner.jpg', ['class' => 'logo', 'alt' => 'Contemos Nosotros 2018']); ?>
         </a>
+        </div>
         
 
         <div class="collapse navbar-collapse  pull-right" id="bs-example-navbar-collapse-1">
