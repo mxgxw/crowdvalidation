@@ -16,6 +16,56 @@
   <p><button>Contact</button></p>
 </div>
 
+<div class="card">
+<?= $this->Html->image('profile-pic-sample.jpg', ['class' => 'profile', 'alt' => 'perfile colaborador']); ?>
+  
+  <h1>Salvador Corado</h1>
+  <p class="title">Front End Developer UI/UX</p>
+  <p>Adobe Certified Web Specialist</p>
+  <a href="#"><i class="fa fa-facebook"></i></a>
+  <a href="#"><i class="fa fa-twitter"></i></a> 
+  <a href="#"><i class="fa fa-linkedin"></i></a> 
+   
+  <p><button>Contact</button></p>
+</div>
+<div class="card">
+<?= $this->Html->image('profile-pic-sample.jpg', ['class' => 'profile', 'alt' => 'perfile colaborador']); ?>
+  
+  <h1>Salvador Corado</h1>
+  <p class="title">Front End Developer UI/UX</p>
+  <p>Adobe Certified Web Specialist</p>
+  <a href="#"><i class="fa fa-facebook"></i></a>
+  <a href="#"><i class="fa fa-twitter"></i></a> 
+  <a href="#"><i class="fa fa-linkedin"></i></a> 
+   
+  <p><button>Contact</button></p>
+</div>
+<div class="card">
+<?= $this->Html->image('profile-pic-sample.jpg', ['class' => 'profile', 'alt' => 'perfile colaborador']); ?>
+  
+  <h1>Salvador Corado</h1>
+  <p class="title">Front End Developer UI/UX</p>
+  <p>Adobe Certified Web Specialist</p>
+  <a href="#"><i class="fa fa-facebook"></i></a>
+  <a href="#"><i class="fa fa-twitter"></i></a> 
+  <a href="#"><i class="fa fa-linkedin"></i></a> 
+   
+  <p><button>Contact</button></p>
+</div>
+<div class="card">
+<?= $this->Html->image('profile-pic-sample.jpg', ['class' => 'profile', 'alt' => 'perfile colaborador']); ?>
+  
+  <h1>Salvador Corado</h1>
+  <p class="title">Front End Developer UI/UX</p>
+  <p>Adobe Certified Web Specialist</p>
+  <a href="#"><i class="fa fa-facebook"></i></a>
+  <a href="#"><i class="fa fa-twitter"></i></a> 
+  <a href="#"><i class="fa fa-linkedin"></i></a> 
+   
+  <p><button>Contact</button></p>
+</div>
+
+
 </div> </div>
 <script>
  $( document ).ready(function() {	
