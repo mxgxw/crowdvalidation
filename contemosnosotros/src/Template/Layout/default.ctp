@@ -63,7 +63,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
                   <span class="icon-bar"></span>
                   <span class="icon-bar"></span>
                 </button>
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="/">
          <?= $this->Html->image('banner.jpg', ['class' => 'logo', 'alt' => 'Contemos Nosotros 2018']); ?>
         </a>
         </div>
@@ -71,7 +71,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
 
         <div class="collapse navbar-collapse  pull-right" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                  <li class="inicio"><a href="http://contemosnosotros.org/">Inicio</a></li>
+                  <li class="inicio"><a href="/">Inicio</a></li>
                   <li class="manifiesto">
                   <?= $this->Html->link('Manifiesto', '/pages/manifiesto'); ?>	
                   </li>
