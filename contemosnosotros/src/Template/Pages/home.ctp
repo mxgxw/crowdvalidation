@@ -14,7 +14,7 @@
           <div class="inpt" id="imgContainer"></div>
 
           
-          <input type="number" class="form-control" min="0" maxlength="3" id="txtCounter" placeholder="Digitar numeros de acta" aria-label="Numeros del Acta">
+          <input type="number" placeholder="Digitar numeros de acta" id="txtCounter" autofocus="" maxlength="3">
           </div>
           <div class="text-center"> 
 			      <button class="btn btn-primary btn-lg" id="btnSend">Enviar Acta</button> 
