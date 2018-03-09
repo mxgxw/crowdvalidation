@@ -32,8 +32,9 @@ class ApiController extends AppController {
         $hashtable = TableRegistry::get('VotoPreferencial');
         $query = $hashtable->find('all');
         $results = $query->all();
+        $result_array = $results->toArray();
 
-        echo json_encode(array("data"=>$results->toArray()));
+        echo json_encode(array("data"=>$result_array));
 
         exit(); // TODO: Remove
     }
