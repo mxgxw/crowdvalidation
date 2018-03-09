@@ -78,10 +78,11 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
                   <li class="faq">
                   <?= $this->Html->link('FAQ', '/pages/faq'); ?>
                   </li>
+                  <!--
                   <li class="agradecimientos">
                   <?= $this->Html->link('Agradecimientos', '/pages/agradecimientos'); ?>
                   </li>
-                  <!--
+                  
                   <li class="resultados"><a href="http://contemosnosotros.org/pages/resultados">Resultados</a></li>
                   <li class="acercade"><a href="http://contemosnosotros.org/pages/acercade">Acerca de Nosotros</a></li>
                   
