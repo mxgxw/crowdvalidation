@@ -7,7 +7,7 @@ use Cake\Network\Exception\NotFoundException;
 
 class ApiController extends AppController {
 
-    private function format_array($obj) {
+    public function format_array($obj) {
       $out_data = [];
       foreach($ojb as $data) {
         $out_data[] = $data;
@@ -46,7 +46,7 @@ class ApiController extends AppController {
         $results = $query->all();
         $results_array = $results->toArray();
 
-        echo json_encode(array("data"=>array_map("format_array",$results_array)));
+        echo json_encode(array("data"=>array_map(array($this,'format_array'),$results_array)));
 
         exit(); // TODO: Remove
     }
