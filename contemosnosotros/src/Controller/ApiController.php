@@ -19,4 +19,15 @@ class ApiController extends AppController {
         exit(); // TODO: Remove
     }
 
+    // Generates a token for each request
+    public function votopreferente() {
+        header("Content-type: application/json");
+        $hashtable = TableRegistry::get('VotoPreferencial');
+        $query = $hashtable->find('all');
+        $results = $query->all();
+
+        echo json_encode($results->toArray());
+
+        exit(); // TODO: Remove
+    }
 }

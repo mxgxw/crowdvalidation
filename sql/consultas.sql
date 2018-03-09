@@ -60,6 +60,7 @@ FROM
 WHERE
   `ambiguos`.`diputado` IS NULL
 
+-- Detalle de todos los diputados
 CREATE VIEW `detalle_diputados` AS
 SELECT
  `departamentos`.`id` as `dpto_id`,
@@ -73,6 +74,26 @@ FROM `diputados` INNER JOIN `departamentos` ON
     INNER JOIN `partidos` ON
     `diputados`.`partido_id` = `partidos`.`id`
 
+-- Conteo de marcas
+CREATE VIEW `voto_preferencial` AS
+SELECT
+  `detalle_diputados`.`diputado_id`,
+  `detalle_diputados`.`dpto_id`,
+  `detalle_diputados`.`dpto_nombre`,
+  `detalle_diputados`.`partido_id`,
+  `detalle_diputados`.`partido_nombre`,
+  `detalle_diputados`.`diputado_nombre`,
+    SUM(`mejores_concurrentes`.`digitado`) AS `marcas`
+FROM
+  `detalle_diputados` INNER JOIN `mejores_concurrentes` ON
+    `detalle_diputados`.`diputado_id` = `mejores_concurrentes`.`diputado`
+GROUP BY
+  `detalle_diputados`.`diputado_id`,
+  `detalle_diputados`.`dpto_id`,
+  `detalle_diputados`.`dpto_nombre`,
+  `detalle_diputados`.`partido_id`,
+  `detalle_diputados`.`partido_nombre`
+    
 -- Anonimizando origenes
 UPDATE `digitaciones` SET `origin`=SHA1(CONCAT('OitdZei3Rm5EQ0MpifPm',`origin`)) WHERE 1
 
