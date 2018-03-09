@@ -98,7 +98,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
       </div>
     </div>
     
-    <footer class="footer" class="container">
+    <footer class="container">
       <ul class="">
                   <li class="inicio"><a href="http://contemosnosotros.org/">Inicio</a></li>
                  <!-- <li class="resultados"><a href="http://contemosnosotros.org/pages/resultados">Resultados</a></li>

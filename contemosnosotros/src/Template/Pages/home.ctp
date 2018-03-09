@@ -3,6 +3,7 @@
           <h1 class="t-blue t-center">Conteo electoral 2018</h1>
           <p style="max-width: 700px;margin: 0 auto;" class="text-center">Es el desarrollo de una herramienta crowd-sourced o de colaboración abierta distribuida, totalmente anonima, capaz de verificar los conteos que se encuentran en las actas de las Juntas Electorales enviadas al TSE (Tribunal Supremo Electoral) de la República de El Salvador.</p>
           <div class="card actas" style="max-width: 800px;">
+            <hr>
             <div class="card-body">
               <h5 class="card-title t-blue text-center">Ingreso de Actas</h5>
               <p class="card-text text-center">Digite únicamente los números (sin guiones) que observa en la imagen, si aparece vacio o solo guiones digite "0". </p>
@@ -114,7 +115,7 @@ $(function () {
     $("#btnSend").attr("disabled", "disabled");
     $("#btnSend").text("Reportando Acta....");
     sendReport();
-    $( "#txtCounter" ).focus();
+    $( "#txtCounter", this ).focus();
   });
 
   $('#btnSend').click(function () {
@@ -128,7 +129,7 @@ $(function () {
       
     }
     sendResult();
-    $( "#txtCounter" ).focus();
+    $( "#txtCounter", this ).focus();
   });
   $(document).keypress(function(e) {
     if(e.which == 13) {

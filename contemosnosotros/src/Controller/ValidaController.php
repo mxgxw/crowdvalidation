@@ -16,7 +16,7 @@ class ValidaController extends AppController {
             'hashvalue IS' => null,
             'completed' => 0
             ])
-            ->order('RAND()');
+            ->order(['random' => 'ASC']);
         $nextImg = $query->first();
 
         if($nextImg === null) {
@@ -35,7 +35,7 @@ class ValidaController extends AppController {
                     'hashvalue IS' => null,
                     'completed' => 0
                 ])
-                ->order('RAND()');
+            ->order(['random' => 'ASC']);
             $nextImg = $query->first();
         }
 
