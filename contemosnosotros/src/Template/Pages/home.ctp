@@ -78,6 +78,7 @@ function sendReport() {
         }
         if(data.Error) {
           window.alert("Error: "+data.Error);
+		  loadNew();
         }
         $("#btnReport").removeAttr("disabled");
         $("#btnSend").removeAttr("disabled");
