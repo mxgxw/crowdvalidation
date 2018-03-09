@@ -193,3 +193,6 @@ padding-left: 0;
 .actas{
 	margin: 0 auto;
 }
+nav > a > img.logo {
+	width: 50%;
+}
