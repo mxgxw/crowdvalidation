@@ -195,4 +195,6 @@ padding-left: 0;
 }
 nav > a > img.logo {
 	width: 50%;
+	padding-top: 12px;
+    padding-left: 12px;
 }
