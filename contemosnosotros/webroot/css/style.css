@@ -223,10 +223,11 @@ img.logo {
 
 /* **********Inicia Estilos agradecimientos ************ */
 .card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     max-width: 300px;
-    margin: auto;
+    margin: 12px;
     text-align: center;
+    float: left;
 }
 
 .card .title { 
