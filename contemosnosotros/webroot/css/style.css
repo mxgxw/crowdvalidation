@@ -180,7 +180,8 @@ footer {
     border-right-color: #013494;
     border-bottom-color: #013494;
     border-left-color: #013494;
-    margin-bottom: 30px;
+	margin-bottom: 30px;
+	border-radius: 3px;
 }
 
 footer a {
