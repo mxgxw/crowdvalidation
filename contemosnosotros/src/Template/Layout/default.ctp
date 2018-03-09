@@ -59,7 +59,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
             <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="collapse navbar-collapse  pull-right" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
                   <li class="inicio"><a href="http://contemosnosotros.org/">Inicio</a></li>
                   <li class="acercade"><a href="http://contemosnosotros.org/pages/manifiesto">Manifiesto</a></li>
