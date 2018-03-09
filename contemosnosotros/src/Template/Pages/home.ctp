@@ -11,6 +11,8 @@
         <div class="input-group mb-3" style="margin: 0 auto;">
 
           <div class="inpt" id="imgContainer"></div>
+		  <div class="ilegible"><p class="text-right"><a id="btnReport">Acta Irregular</a></p></div>
+
 
           <div class="row inputt">
               <div class="centrado">
@@ -20,7 +22,6 @@
           </div>
           <div class="text-center"> 
 			      <button class="btn btn-primary btn-lg" id="btnSend">Enviar Acta</button> 
-			      <button class="btn btn-danger btn-lg" id="btnReport">Acta Irregular</button>
           </div>
           <div class="text-center">
             <div id="#alert-box" class="alert alert-success alert-dismissible fade show" role="alert" style="display: none;">
