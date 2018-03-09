@@ -1,5 +1,5 @@
         
-       <div class="row"> <div class="col-sm-10 col-sm-offset-1"> 
+       <div class="row"> <div class="col-sm-12"> 
           <h1 class="t-blue t-center">Conteo electoral 2018</h1>
           <p style="max-width: 700px;margin: 0 auto;" class="text-center">Es el desarrollo de una herramienta crowd-sourced o de colaboración abierta distribuida, totalmente anonima, capaz de verificar los conteos que se encuentran en las actas de las Juntas Electorales enviadas al TSE (Tribunal Supremo Electoral) de la República de El Salvador.</p>
           <hr class="my-4">
