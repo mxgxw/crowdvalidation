@@ -41,7 +41,7 @@ El sistema busca validar de forma anónima la sumatoria de los resultados en las
 <p>¿Dónde veo los resultados?</p>
 <blockquote>Los resultados deben ser consolidados y procesados. Al momento de la escritura de esta entrada se estan haciendo los reportes para que puedas consultarlos. Si no quieres esperar y tienes los conocimientos tecnicos adecuados, puedes bajar los datos CRUDOS de la base de datos que utiliza el sistema, es decir todo el detalle de las digitaciones desde la siguiente direccion. Una copia se realiza cada cinco minutos.</blockquote>
 
-<a href="https://www.contemosnosotros.org/sqldumps">https://www.contemosnosotros.org/sqldumps</a>
+<a href="https://contemosnosotros.org/sqldumps">https://contemosnosotros.org/sqldumps</a>
 
 <p>¿De dónde sacan estas imágenes?</p>
 <blockquote>Las imágenes son recortes de las actas presentadas por las JRV que corresponden a los totales registrados para cada candidato, las copias digitales de las actas están disponibles de forma pública en la página oficial del TSE en http://elecciones2018.tse.gob.sv.</blockquote>

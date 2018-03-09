@@ -48,3 +48,14 @@ FROM
   `concurrentes_validados`.`diputado`=`ambiguos`.`diputado`
 WHERE
   `ambiguos`.`diputado` IS NULL
+
+-- Mejor conjunto de concurrentes:
+CREATE VIEW `mejores_concurrentes` AS
+SELECT
+  `concurrentes_validados`.*
+FROM
+  `concurrentes_validados` LEFT JOIN `ambiguos` ON
+  `concurrentes_validados`.`acta_id`=`ambiguos`.`acta_id` AND
+  `concurrentes_validados`.`diputado`=`ambiguos`.`diputado`
+WHERE
+  `ambiguos`.`diputado` IS NULL
