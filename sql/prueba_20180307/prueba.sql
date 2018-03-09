@@ -35,3 +35,13 @@ WHERE
   `acta_id` NOT IN (
   SELECT `acta_id` FROM `ambiguos20180307222300` 
   )
+
+-- Digitaciones por acta_id
+SELECT
+  `acta_id`,
+  `diputado`,
+  COUNT(*) as `digitaciones`
+FROM `digitaciones`
+GROUP BY
+  `acta_id`,
+  `diputado`
