@@ -8,11 +8,17 @@ use Cake\Network\Exception\NotFoundException;
 class ApiController extends AppController {
 
     public function format_array($obj) {
-      $out_data = [];
-      foreach($obj as $key=>$data) {
-        $out_data[] = $data;
-      }
-      return $out_data;
+      return array(
+        $obj->diputado_id,
+        $obj->dpto_id,
+        $obj->dpto_nombre,
+        $obj->partido_id,
+        $obj->partido_nombre,
+        $obj->diputado_nombre,
+        $obj->marcas,
+        $obj->disponibles,
+        $obj->procesadas
+      );
     }
     // Generates a token for each request
     public function index() {
