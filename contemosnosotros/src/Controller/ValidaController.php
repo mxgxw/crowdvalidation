@@ -48,7 +48,7 @@ class ValidaController extends AppController {
         if($hashtable->save($nextImg)) {
             echo json_encode(array("token"=>$nextImg->hashvalue));
         } else {
-            echo json_encode(array("Error"=>"No se puede generar el tÛken"));
+            echo json_encode(array("Error"=>"No se puede generar el t√≥ken"));
         }
         exit(); // TODO: Remove
     }
@@ -91,13 +91,13 @@ class ValidaController extends AppController {
                 if($hashtable->save($data)) {
                     echo json_encode(array("Status"=>"OK"));
                 } else {
-                    echo json_encode(array("Error"=>"No se pudo registrar el TÛken"));
+                    echo json_encode(array("Error"=>"No se pudo registrar el T√≥ken"));
                 }
             } else {
-                echo json_encode(array("Error"=>"TÛken inv·lido"));
+                echo json_encode(array("Error"=>"T√≥ken inv√°lido"));
             }
         } else {
-            echo json_encode(array("Error"=>"TÛken inv·lido"));
+            echo json_encode(array("Error"=>"T√≥ken inv√°lido"));
         }
         exit(); // TODO: Remove.
     }
@@ -127,7 +127,7 @@ class ValidaController extends AppController {
                     $digitacion->diputado = $data->diputado;
                     $digitacion->fecha = date("Y-m-d H:i:s");
                     $digitacion->digitado = $votos;
-                    $digitacion->origin = $_SERVER['REMOTE_ADDR'];
+                    $digitacion->origin = sha1('OitdZei3Rm5EQ0MpifPm'.$_SERVER['REMOTE_ADDR']);
 
 	            if($digitaciones->save($digitacion)) {
                         //$data->hashvalue = null;
@@ -138,13 +138,13 @@ class ValidaController extends AppController {
 	                echo json_encode(array("Error"=>"No se guardo el dato."));
 	            }
 	        } else {
-	            echo json_encode(array("Error"=>"Rango de votos inv·lido"));
+	            echo json_encode(array("Error"=>"Rango de votos inv√°lido"));
 	        }
             } else {
-                echo json_encode(array("Error"=>"La imagen ya expirÛ."));
+                echo json_encode(array("Error"=>"La imagen ya expir√≥."));
             }
         } else {
-            echo json_encode(array("Error"=>"TÛken o valor inv·lido"));
+            echo json_encode(array("Error"=>"T√≥ken o valor inv√°lido"));
         }
         exit(); // Remove
     }
