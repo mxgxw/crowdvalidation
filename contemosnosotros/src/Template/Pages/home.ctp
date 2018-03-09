@@ -15,7 +15,7 @@
 
           <div class="row inputt">
               <div class="centrado">
-               	<input type="number" placeholder="Digitar numeros de acta" id="txtCounter" autofocus="" maxlength="3" min="0">
+               	<input type="number" placeholder="Digitar numeros de acta" id="txtCounter" autofocus="" maxlength="3" min="0" max="999" >
               </div>
           
           </div>
