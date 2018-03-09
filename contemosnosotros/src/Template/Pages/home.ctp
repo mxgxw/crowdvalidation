@@ -11,7 +11,7 @@
         <div class="input-group mb-3" style="margin: 0 auto;">
 
           <div class="inpt" id="imgContainer"></div>
-		  <div class="ilegible"><p class="text-right"><a id="btnReport">Acta Irregular</a></p></div>
+		  <div class="ilegible"><p class="text-right"><small><a id="btnReport">Acta Irregular</a></small></p></div>
 
 
           <div class="row inputt">
