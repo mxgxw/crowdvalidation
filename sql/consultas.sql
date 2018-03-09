@@ -59,3 +59,11 @@ FROM
   `concurrentes_validados`.`diputado`=`ambiguos`.`diputado`
 WHERE
   `ambiguos`.`diputado` IS NULL
+
+CREATE VIEW 
+
+-- Anonimizando origenes
+UPDATE `digitaciones` SET `origin`=SHA1(CONCAT('OitdZei3Rm5EQ0MpifPm',`origin`)) WHERE 1
+
+-- Indice para acelerar consultas
+ALTER TABLE `hash_table` ADD `random` BIGINT NULL AFTER `ilegible`, ADD INDEX `rnd_idx` (`random`);
