@@ -198,3 +198,21 @@ img.logo {
 	padding-top: 12px;
     padding-left: 12px;
 }
+
+
+
+/* **********Inicia Estilos agradecimientos ************ */
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+}
+
+.title {
+    color: grey;
+    font-size: 18px;
+}
+
+/* **********Finaliza Estilos agradecimientos ************ */
+
