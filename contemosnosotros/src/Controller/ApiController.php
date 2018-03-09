@@ -45,7 +45,7 @@ class ApiController extends AppController {
         $query = $hashtable->find('all');
         $results = $query->all();
 
-        echo json_encode(array("data"=>map(format_array,$results->toArray())));
+        echo json_encode(array("data"=>map("format_array",$results->toArray())));
 
         exit(); // TODO: Remove
     }
