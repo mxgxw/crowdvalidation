@@ -21,9 +21,9 @@ CREATE TABLE partidos (
 CREATE TABLE diputados
 (
     id SMALLINT NOT NULL PRIMARY KEY,
-    documento CHAR(1) NOT NULL,
-    fila TINYINT NOT NULL,
-    columna TINYINT NOT NULL,
+    documento CHAR(1) NULL,
+    fila TINYINT NULL,
+    columna TINYINT NULL,
     departamento_id TINYINT NULL,
     departamento VARCHAR(20) NOT NULL,
     partido_id TINYINT NULL,
