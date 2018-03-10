@@ -40,7 +40,7 @@
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
 <script>
  $( document ).ready(function() {	
-   $( ".agradecimientos" ).addClass( "active" );
+   $( ".datatable" ).addClass( "active" );
    
    $('#marcasvotos').DataTable( {
         "ajax": 'https://contemosnosotros.org/api/votopreferenteactas'
