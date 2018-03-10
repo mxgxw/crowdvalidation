@@ -208,7 +208,7 @@
    createChart('#chart',12);
    createChart('#chart1',85);
 
-       
+}); 
 
 
 </script>
