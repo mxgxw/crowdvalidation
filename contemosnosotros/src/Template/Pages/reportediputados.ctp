@@ -115,14 +115,15 @@
                  .startAngle(0)
                  .endAngle(2*Math.PI);
 
-        var baseUrl = window.location.pathname;
+        // var baseUrl = window.location.pathname;
+        var baseUrl ='https://contemosnosotros.org/staging/img/';
 
          var arcLine=d3.svg.arc()
                  .innerRadius(innerRadius)
                  .outerRadius(outerRadius)
                  .startAngle(0);
                  svg.append('image').attr({
-                   'xlink:href': baseUrl +id_diputado+'.png',
+                   'xlink:href': baseUrl + id_diputado+'.png',
                    // 'xlink:href': 'https://contemosnosotros.org/staging/img/'+id_diputado+'.png',
                    width:20,
                    height:20,
