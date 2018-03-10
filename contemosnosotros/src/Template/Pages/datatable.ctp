@@ -44,8 +44,8 @@
    
    $('#marcasvotos').DataTable( {
         "ajax": 'https://contemosnosotros.org/api/votopreferenteactas'
-    })
-	{
+    }),
+	 "language": {
     "decimal":        "",
     "emptyTable":     "No hay datos disponibles",
     "info":           "Mostrando _START_ al _END_ de _TOTAL_ entradas",
