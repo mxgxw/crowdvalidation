@@ -26,7 +26,7 @@
 		}
 
 		.chart-container{
-		    padding:10px;
+		    padding:4px;
 		    display:inline-block;
 		    
 		}
