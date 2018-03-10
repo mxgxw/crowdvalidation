@@ -37,13 +37,15 @@
 		    filter: drop-shadow( 0px 3px 3px rgba(0,0,0,.5) );
 		}
 
+		.
+
 	</style>
 	<div class="col-sm-12" >      
 		<!-- <h1>Reporte de diputados</h1> -->
 		<div class="widget">
 		    <div class="header">Reporte de diputados</div>
 
-		    <div class="resultadoDiputado">
+		    <div class=".col-xs-6 .col-sm-4">
 
 		    	<!-- ****aqui | agregar numero de diputado ***** -->
 		    	<div id="chart" class="chart-container" ></div> 
@@ -57,7 +59,7 @@
 		    	<h4 id="Procesadas27" class="Procesadas">60.35% Procesadas</h4>
 
 		    </div>
-		    <div class="resultadoDiputado">
+		    <div class=".col-xs-6 .col-sm-4">
 		    	<div id="chart1" class="chart-container"></div>
 
 		    	<h3 id="name33" class="NameDiputado">Rene Portillo Cuadra</h3>
@@ -69,7 +71,7 @@
 		    	<div id="chartDiponible33"></div>
 		    	<h4 id="Procesadas33" class="Procesadas">60.35% Procesadas</h4>
 		    </div>
-		    <div class="resultadoDiputado">
+		    <div class=".col-xs-6 .col-sm-4">
 		    	<div id="chart2" class="chart-container"></div>
 
 		    	<h3 id="name100" class="NameDiputado">Rene Portillo Cuadra</h3>
