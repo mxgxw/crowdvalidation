@@ -44,31 +44,7 @@
    
    $('#marcasvotos').DataTable( {
         "ajax": 'https://contemosnosotros.org/api/votopreferenteactas'
-    }),
-	 "language": {
-    "decimal":        "",
-    "emptyTable":     "No hay datos disponibles",
-    "info":           "Mostrando _START_ al _END_ de _TOTAL_ entradas",
-    "infoEmpty":      "Mostrando 0 a 0 de 0 entradas",
-    "infoFiltered":   "(filtrado De _MAX_ total entradas)",
-    "infoPostFix":    "",
-    "thousands":      ",",
-    "lengthMenu":     "Mostrar _MENU_ entradas",
-    "loadingRecords": "Cargando...",
-    "processing":     "Procesando...",
-    "search":         "Buscar:",
-    "zeroRecords":    "No se encontraron resultados",
-    "paginate": {
-        "first":      "Primera",
-        "last":       "Ultima",
-        "next":       "Siguiente",
-        "previous":   "Anterior"
-    },
-    "aria": {
-        "sortAscending":  ": activar para ordenar la columna ascendentemente",
-        "sortDescending": ": activar para ordenar la columna descendentemente"
-    }
-}
+    })
 	 );
    
  });
