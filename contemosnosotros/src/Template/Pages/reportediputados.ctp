@@ -58,7 +58,7 @@
  $( document ).ready(function() {	
    $( ".reportediputados" ).addClass( "active" );
 
-       var createGradient=function(svg,id,color1,color2,color2){
+       var createGradient=function(svg,id,color1,color2,color3){
 
            var defs = svg.append("svg:defs")
 
