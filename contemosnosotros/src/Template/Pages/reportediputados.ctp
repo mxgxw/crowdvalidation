@@ -116,7 +116,7 @@
                  .endAngle(2*Math.PI);
 
         // var baseUrl = window.location.pathname;
-        var baseUrl ='https://contemosnosotros.org/staging/img/';
+        var baseUrl ='https://contemosnosotros.org/staging/img/diputados/';
 
          var arcLine=d3.svg.arc()
                  .innerRadius(innerRadius)
