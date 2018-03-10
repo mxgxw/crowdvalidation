@@ -1,86 +1,111 @@
 <div class="row"> 
 	<div class="col-sm-10 col-sm-offset-1">      
 		<h1>Reporte de diputados</h1>
-		<div class="row">
-			<canvas id="openedCanvas" height="230" width="680"></canvas>
-		</div>
+		<div class="container"></div>
+		<div class="container"></div>
+
 	</div> 
 
-</div>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.0.1/Chart.bundle.min.js"></script>
 
+
+</div>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/d3/3.4.1/d3.min.js"></script>        
 
 <script>
  $( document ).ready(function() {	
    $( ".reportediputados" ).addClass( "active" );
 
-   Chart.defaults.RoundedDoughnut = Chart.helpers.clone(Chart.defaults.doughnut);
-           Chart.controllers.RoundedDoughnut = Chart.controllers.doughnut.extend({
-               draw: function (ease) {
-               		var ctx = this.chart.chart.ctx;
-                   
-                   var easingDecimal = ease || 1;
-                   Chart.helpers.each(this.getDataset().metaData, function (arc, index) {
-                       arc.transition(easingDecimal).draw();
+   function CircularGraph(){
 
-                       var vm = arc._view;
-                       var radius = (vm.outerRadius + vm.innerRadius) / 2;
-                       var thickness = (vm.outerRadius - vm.innerRadius) / 2;
-                       var angle = Math.PI - vm.endAngle - Math.PI / 2;
-                       
-                       ctx.save();
-                       ctx.fillStyle = vm.backgroundColor;
-                       ctx.translate(vm.x, vm.y);
-                       ctx.beginPath();
-                       ctx.arc(radius * Math.sin(angle), radius * Math.cos(angle), thickness, 0, 2 * Math.PI);
-                       ctx.arc(radius * Math.sin(Math.PI), radius * Math.cos(Math.PI), thickness, 0, 2 * Math.PI);
-                       ctx.closePath();
-                       ctx.fill();
-                       ctx.restore();
-                   });
-               },
-           });
+                   this.svgEl;    
+                   this.settings =  [
+                       {
+                           "totalArcAngle": 300,
+                           "startAngle": -150,
+                           "endAngle": 50,
+                           "progressValue": 200,
+                           "radius": 150,
+                           "thickness": 20
+                       }
+                   ]; 
 
-           var deliveredData = {
-               labels: [
-                   "Value"
-               ],
-               datasets: [
-                   {
-                       data: [85, 15],
-                       backgroundColor: [
-                           "#3ec556",
-                           "rgba(0,0,0,0)"
-                       ],
-                       hoverBackgroundColor: [
-                           "#3ec556",
-                           "rgba(0,0,0,0)"
-                       ],
-                       borderWidth: [
-                           0, 0
-                       ]
-                   }]
-           };
-
-           var deliveredOpt = {
-               cutoutPercentage: 88,
-               animation: {
-                   animationRotate: true,
-                   duration: 2000
-               },
-               legend: {
-                   display: false
-               },
-               tooltips: {
-                   enabled: false
                }
-           };
 
-           var chart = new Chart($('#openedCanvas'), {
-               type: 'RoundedDoughnut',
-               data: deliveredData,
-               options: deliveredOpt
-           });
+               CircularGraph.prototype.init = function(){
+                   this.svgEl = d3.selectAll(".container")                        
+                                        .append("svg")
+                                        .attr("height", "500")
+                                        .attr("width", "600")           
+                                        .append("g")
+                                        .attr("transform", "translate(300,250)");
+                   
+                   this.svgEl.selectAll("g")
+                       .data(this.getData())
+                       .enter().append("g")
+                       .attr("class", "arc")
+                       .append("path")
+                       .style("fill", "#93cfeb")
+                       .attr("d", this.drawArc());                                     
+
+               }
+
+               CircularGraph.prototype.degreeToRadian = function(deg){
+                    return deg * Math.PI / 180.0;
+               }
+
+               CircularGraph.prototype.getData = function(first_argument) {
+                   return this.settings;
+               }
+
+               CircularGraph.prototype.changeArc = function(){
+                   d3.selectAll("g.arc > path")
+                    .call(this.arcTween);
+               }
+
+                CircularGraph.prototype.arcTween = function(sel){
+                   sel.transition().duration(1000)
+                    .attrTween("d", self.tweenArc({ endAngle: self.getRandomRange(100, 140) }));
+               }
+
+                CircularGraph.prototype.tweenArc = function(b){                
+                   var self = this;
+                   return function (a) {
+                       console.log(a);
+                       var i = d3.interpolate(a, b);
+                       for (var key in b) a[key] = b[key]; // update data
+                       return function (t) {
+                           return self.drawArc()(i(t));
+                       };
+                   };
+               }
+
+               CircularGraph.prototype.drawArc = function(){
+                       var self = this;
+                               d3.svg.arc()
+                                .startAngle(function (d) {
+                                    return self.degreeToRadian(d.startAngle);
+                                })
+                                .endAngle(function (d) {
+                                    return self.degreeToRadian(d.endAngle);
+                                })
+                                .innerRadius(function (d) {
+                                    return d.radius
+                                })            
+                                .outerRadius(function (d) {
+                                    return d.thickness + d.radius;
+                                });
+               }
+
+               CircularGraph.prototype.getRandomRange = function(min, max){
+                    return Math.random() * (max - min) + min;
+               }
+
+               var graph = new CircularGraph();
+               graph.init();
+               window.setInterval(function(){
+                   graph.changeArc();
+               }, 2000);
+
+   
  });
 </script>
