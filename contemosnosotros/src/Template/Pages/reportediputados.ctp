@@ -26,7 +26,7 @@
 		}
 
 		.chart-container{
-		    padding:25px;
+		    padding:10px;
 		    display:inline-block;
 		    
 		}
@@ -43,6 +43,7 @@
 		    <div class="header">Reporte de diputados</div>
 		    <div id="chart" class="chart-container" ></div>
 		    <div id="chart1" class="chart-container"></div>
+		    <div id="chart2" class="chart-container"></div>
 		</div>
 
 	</div> 
@@ -211,6 +212,7 @@
 
    createChart('#chart',12,27);
    createChart('#chart1',85,33);
+   createChart('#chart2',25,33);
 
 }); 
 
