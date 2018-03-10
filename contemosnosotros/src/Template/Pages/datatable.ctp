@@ -44,7 +44,7 @@
    
    $('#marcasvotos').DataTable( {
         "ajax": 'https://contemosnosotros.org/api/votopreferenteactas'
-    }
+    })
 	{
     "decimal":        "",
     "emptyTable":     "No hay datos disponibles",
