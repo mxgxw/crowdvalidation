@@ -127,7 +127,7 @@
                    // 'xlink:href': 'https://contemosnosotros.org/staging/img/'+id_diputado+'.png',
                    // width:20,
                    // height:20,
-                   transform:'translate(0,0)'
+                   transform:'translate(-150,-150)'
                  });      
 
          var pathBackground=svg.append('path')
