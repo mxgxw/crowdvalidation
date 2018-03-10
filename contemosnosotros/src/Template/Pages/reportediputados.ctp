@@ -27,7 +27,7 @@
 		}
 
 		.chart-container{
-		    padding:10px;
+		    padding:4px;
 		    display:inline-block;
 		    
 		}
@@ -96,7 +96,7 @@
          var outerRadius=(w/2)-10;
          var innerRadius=110;
 
-         var color = ['#f2503f','#ea0859','#404F70'];
+         var color = ['#0070bc','#004eab','#001e79'];
 
          var svg=d3.select(id)
                  .append("svg")
@@ -138,7 +138,7 @@
                      d:arc
                  })
                  .style({
-                     fill:color[2]
+                     fill:'#c5c5c5'
                  });
 
 
@@ -164,7 +164,7 @@
                  })
                  .style({
                      fill:color[1],
-                     'font-size':'90px'
+                     'font-size':'1px'
 
                  });
              svg.append('text')
