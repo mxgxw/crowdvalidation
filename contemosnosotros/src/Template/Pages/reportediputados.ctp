@@ -125,8 +125,8 @@
                  svg.append('image').attr({
                    'xlink:href': baseUrl + id_diputado+'.png',
                    // 'xlink:href': 'https://contemosnosotros.org/staging/img/'+id_diputado+'.png',
-                   width:20,
-                   height:20,
+                   // width:20,
+                   // height:20,
                    transform:'translate(0,0)'
                  });      
 
