@@ -1,123 +1,124 @@
-<div class="row"> 
+             <div class="row"> 
 
-	<style type="text/css">
-		
-		.widget {
-		    margin: 0 auto;
-		    width:100%;
-		    margin-top:50px;
-		    background-color: #fff;
-		    border-radius: 5px;
-		    box-shadow: 0px 0px 1px 0px #06060d;
-		    text-align: center;
+  <style type="text/css">
+    
+    .widget {
+        margin: 0 auto;
+        width:100%;
+        margin-top:50px;
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 0px 0px 1px 0px #06060d;
+        text-align: center;
 
-		}
+    }
 
-		.header{
-		    background-color: #29384D;
-		    height:40px;
-		    color:#929DAF;
-		    text-align: center;
-		    line-height: 40px;
-		    border-top-left-radius: 7px;
-		    border-top-right-radius: 7px;
-		    font-weight: 400;
-		    font-size: 1.5em;
-		    text-shadow: 1px 1px #06060d;
-		}
+    .header{
+        background-color: #29384D;
+        height:40px;
+        color:#929DAF;
+        text-align: center;
+        line-height: 40px;
+        border-top-left-radius: 7px;
+        border-top-right-radius: 7px;
+        font-weight: 400;
+        font-size: 1.5em;
+        text-shadow: 1px 1px #06060d;
+    }
 
-		.chart-container{
-		    padding:4px;
-		    display:inline-block;
-		    
-		}
+    .chart-container{
+        padding:4px;
+        display:inline-block;
+        
+    }
 
-		.shadow {
-		    -webkit-filter: drop-shadow( 0px 3px 3px rgba(0,0,0,.5) );
-		    filter: drop-shadow( 0px 3px 3px rgba(0,0,0,.5) );
-		}
+    .shadow {
+        /*-webkit-filter: drop-shadow( 0px 3px 3px rgba(0,0,0,.5) );*/
+        /*filter: drop-shadow( 0px 3px 3px rgba(0,0,0,.5) );*/
+    }
 
-		
-		h3.NameDiputado {
-	      font-size: 14px;
-	      margin: 10px auto 0px;
-		    color: #666;
-	      /* display: block; */
-	      /* width: 100%; */
-		}
-
-
-		h4.VotosDiputado {
-		    font-size: 18px;
-		    font-weight: bold;
-		    color: #666;
-		    margin: 6px auto !important;
-		}
-		.diputadoChart{
-
-			max-width: 225px;
-			display: inline-block;
-			margin: 10px;
-		}
+    
+    h3.NameDiputado {
+        font-size: 14px;
+        margin: 10px auto 0px;
+        color: #666;
+        /* display: block; */
+        /* width: 100%; */
+    }
 
 
-	</style>
-	<div class="col-sm-12" >      
-		<h1>LO ESTOY TRABAJANDO NO ME CRITIQUEN </h1>
-		<div class="widget">
-		    <div class="header">Reporte de diputados</div>
+    h4.VotosDiputado {
+        font-size: 18px;
+        font-weight: bold;
+        color: #666;
+        margin: 6px auto !important;
+    }
+    .diputadoChart{
 
-		    <div class="diputadoChart">
+      max-width: 225px;
+      display: inline-block;
+      margin: 10px;
+    }
 
-		    	<!-- ****aqui | agregar numero de diputado ***** -->
-		    	<div id="chart" class="chart-container" ></div> 
-		    	<h3 id="name27" class="NameDiputado">Rene Portillo Cuadra</h3>
-		    	<h4 id="votos27" class="VotosDiputado">1987 Votos</h4>
-		    	<h2 id="porc27" class="porcDiputado">77<span>%</span></h2>
-		    	<p class="textCoincidencia">Veracidad</p>
-		    	<hr>
-		    	<h3 id="ActasDiponibles27">Actas Disponibles: <strong>1580</strong></h3>
-		    	<div id="chartDiponible27"></div>
-		    	<h4 id="Procesadas27" class="Procesadas">60.35% Procesadas</h4>
 
-		    </div>
-		    <div class="diputadoChart">
-		    	<div id="chart1" class="chart-container"></div>
+  </style>
+  <div class="col-sm-12" >      
+    <!-- <h1>Reporte de diputados</h1> -->
+    <div class="widget">
+        <div class="header">Reporte de diputados</div>
 
-		    	<h3 id="name33" class="NameDiputado">Rene Portillo Cuadra</h3>
-		    	<h4 id="votos33" class="VotosDiputado">1987 Votos</h4>
-		    	<h2 id="porc33" class="porcDiputado">77<span>%</span></h2>
-		    	<p class="textCoincidencia">Veracidad</p>
-		    	<hr>
-		    	<h3 id="ActasDiponibles33">Actas Disponibles: <strong>1580</strong></h3>
-		    	<div id="chartDiponible33"></div>
-		    	<h4 id="Procesadas33" class="Procesadas">60.35% Procesadas</h4>
-		    </div>
-		    <div class="diputadoChart">
-		    	<div id="chart2" class="chart-container"></div>
+        <div class="diputadoChart">
 
-		    	<h3 id="name100" class="NameDiputado">Rene Portillo Cuadra</h3>
-		    	<h4 id="votos100" class="VotosDiputado">1987 Votos</h4>
-		    	<h2 id="porc100" class="porcDiputado">77<span>%</span></h2>
-		    	<p class="textCoincidencia">Veracidad</p>
-		    	<hr>
-		    	<h3 id="ActasDiponibles100">Actas Disponibles: <strong>1580</strong></h3>
-		    	<div id="chartDiponible100"></div>
-		    	<h4 id="Procesadas100" class="Procesadas">60.35% Procesadas</h4>
-		    </div>
-		    
-		    
-		</div>
+          <!-- ****aqui | agregar numero de diputado ***** -->
+          <div id="chart" class="chart-container" ></div> 
+          <h3 id="name27" class="NameDiputado">Rene Portillo Cuadra</h3>
+          <h4 id="votos27" class="VotosDiputado">1987 Votos</h4>
+          <h2 id="porc27" class="porcDiputado">77<span>%</span></h2>
+          <p class="textCoincidencia">Veracidad</p>
+          <hr>
+          <h3 id="ActasDiponibles27">Actas Disponibles: <strong>1580</strong></h3>
+          <div id="chartDiponible27"></div>
+          <h4 id="Procesadas27" class="Procesadas">60.35% Procesadas</h4>
 
-	</div> 
+        </div>
+        <div class="diputadoChart">
+          <div id="chart1" class="chart-container"></div>
+
+          <h3 id="name33" class="NameDiputado">Rene Portillo Cuadra</h3>
+          <h4 id="votos33" class="VotosDiputado">1987 Votos</h4>
+          <h2 id="porc33" class="porcDiputado">77<span>%</span></h2>
+          <p class="textCoincidencia">Veracidad</p>
+          <hr>
+          <h3 id="ActasDiponibles33">Actas Disponibles: <strong>1580</strong></h3>
+          <div id="chartDiponible33"></div>
+          <h4 id="Procesadas33" class="Procesadas">60.35% Procesadas</h4>
+        </div>
+        <div class="diputadoChart">
+          <div id="chart2" class="chart-container"></div>
+
+          <h3 id="name100" class="NameDiputado">Rene Portillo Cuadra</h3>
+          <h4 id="votos100" class="VotosDiputado">1987 Votos</h4>
+          <h2 id="porc100" class="porcDiputado">77<span>%</span></h2>
+          <p class="textCoincidencia">Veracidad</p>
+          <hr>
+          <h3 id="ActasDiponibles100">Actas Disponibles: <strong>1580</strong></h3>
+          <div id="chartDiponible100"></div>
+          <h4 id="Procesadas100" class="Procesadas">60.35% Procesadas</h4>
+        </div>
+        
+        
+    </div>
+
+  </div> 
 
 
 
 </div>
-<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/d3/3.4.1/d3.min.js"></script>        
+<script type="text/javascript" src="d3.min.js"></script>        
+<!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.4.1/d3.min.js"></script>         -->
 
 <script>
- $( document ).ready(function() {	
+ $( document ).ready(function() { 
    $( ".reportediputados" ).addClass( "active" );
 
        var createGradient=function(svg,id,color1,color2,color3){
@@ -159,9 +160,12 @@
                  .sort(null);
 
          var w=226,h=226;
+         console.log(w/2);
+         console.log(h/2);
 
          var outerRadius=(w/2)-10;
-         var innerRadius=80;
+         console.log(outerRadius);
+         var innerRadius=83;
 
          var color = ['#0070bc','#004eab','#001e79'];
 
@@ -173,6 +177,8 @@
                      class:'shadow'
                  }).append('g')
                  .attr({
+                   width:w,
+                     height:h,
                      transform:'translate('+w/2+','+h/2+')'
                  });
 
@@ -196,7 +202,7 @@
                    // 'xlink:href': 'https://contemosnosotros.org/staging/img/'+id_diputado+'.png',
                    width:w,
                    height:h,
-                   transform:'translate('+w/2+','+h/2+')'
+                   transform:'translate(-'+w/2+',-'+h/2+')'
                  });      
 
          var pathBackground=svg.append('path')
