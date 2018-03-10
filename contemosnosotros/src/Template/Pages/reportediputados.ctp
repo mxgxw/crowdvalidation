@@ -1,8 +1,50 @@
 <div class="row"> 
+
+	<style type="text/css">
+		
+		.widget {
+		    margin: 0 auto;
+		    width:1200px;
+		    margin-top:50px;
+		    background-color: #222D3A;
+		    border-radius: 5px;
+		    box-shadow: 0px 0px 1px 0px #06060d;
+
+		}
+
+		.header{
+		    background-color: #29384D;
+		    height:40px;
+		    color:#929DAF;
+		    text-align: center;
+		    line-height: 40px;
+		    border-top-left-radius: 7px;
+		    border-top-right-radius: 7px;
+		    font-weight: 400;
+		    font-size: 1.5em;
+		    text-shadow: 1px 1px #06060d;
+		}
+
+		.chart-container{
+		    padding:25px;
+		    display:inline-block;
+		    
+		}
+
+		.shadow {
+		    -webkit-filter: drop-shadow( 0px 3px 3px rgba(0,0,0,.5) );
+		    filter: drop-shadow( 0px 3px 3px rgba(0,0,0,.5) );
+		}
+
+	</style>
 	<div class="col-sm-10 col-sm-offset-1">      
 		<h1>Reporte de diputados</h1>
-		<div class="container"></div>
-		<div class="container"></div>
+		
+		<div class="widget">
+		    <div class="header">Progress Status</div>
+		    <div id="chart" class="chart-container" ></div>
+		    <div id="chart1" class="chart-container"></div>
+		</div>
 
 	</div> 
 
@@ -15,97 +57,158 @@
  $( document ).ready(function() {	
    $( ".reportediputados" ).addClass( "active" );
 
-   function CircularGraph(){
+       var createGradient=function(svg,id,color1,color2){
 
-                   this.svgEl;    
-                   this.settings =  [
-                       {
-                           "totalArcAngle": 300,
-                           "startAngle": -150,
-                           "endAngle": 50,
-                           "progressValue": 200,
-                           "radius": 150,
-                           "thickness": 20
-                       }
-                   ]; 
+           var defs = svg.append("svg:defs")
 
-               }
+           var red_gradient = defs.append("svg:linearGradient")
+                   .attr("id", id)
+                   .attr("x1", "0%")
+                   .attr("y1", "0%")
+                   .attr("x2", "50%")
+                   .attr("y2", "100%")
+                   .attr("spreadMethod", "pad");
 
-               CircularGraph.prototype.init = function(){
-                   this.svgEl = d3.selectAll(".container")                        
-                                        .append("svg")
-                                        .attr("height", "500")
-                                        .attr("width", "600")           
-                                        .append("g")
-                                        .attr("transform", "translate(300,250)");
-                   
-                   this.svgEl.selectAll("g")
-                       .data(this.getData())
-                       .enter().append("g")
-                       .attr("class", "arc")
-                       .append("path")
-                       .style("fill", "#93cfeb")
-                       .attr("d", this.drawArc());                                     
+           red_gradient.append("svg:stop")
+                   .attr("offset", "50%")
+                   .attr("stop-color", color1)
+                   .attr("stop-opacity", 1);
 
-               }
+           red_gradient.append("svg:stop")
+                   .attr("offset", "100%")
+                   .attr("stop-color", color2)
+                   .attr("stop-opacity", 1);
+       };
 
-               CircularGraph.prototype.degreeToRadian = function(deg){
-                    return deg * Math.PI / 180.0;
-               }
+       function createChart(id,percent){
 
-               CircularGraph.prototype.getData = function(first_argument) {
-                   return this.settings;
-               }
 
-               CircularGraph.prototype.changeArc = function(){
-                   d3.selectAll("g.arc > path")
-                    .call(this.arcTween);
-               }
+         var ratio=percent/100;
 
-                CircularGraph.prototype.arcTween = function(sel){
-                   sel.transition().duration(1000)
-                    .attrTween("d", self.tweenArc({ endAngle: self.getRandomRange(100, 140) }));
-               }
+         var pie=d3.layout.pie()
+                 .value(function(d){return d})
+                 .sort(null);
 
-                CircularGraph.prototype.tweenArc = function(b){                
-                   var self = this;
-                   return function (a) {
-                       console.log(a);
-                       var i = d3.interpolate(a, b);
-                       for (var key in b) a[key] = b[key]; // update data
-                       return function (t) {
-                           return self.drawArc()(i(t));
-                       };
-                   };
-               }
+         var w=300,h=300;
 
-               CircularGraph.prototype.drawArc = function(){
-                       var self = this;
-                               d3.svg.arc()
-                                .startAngle(function (d) {
-                                    return self.degreeToRadian(d.startAngle);
-                                })
-                                .endAngle(function (d) {
-                                    return self.degreeToRadian(d.endAngle);
-                                })
-                                .innerRadius(function (d) {
-                                    return d.radius
-                                })            
-                                .outerRadius(function (d) {
-                                    return d.thickness + d.radius;
-                                });
-               }
+         var outerRadius=(w/2)-10;
+         var innerRadius=110;
 
-               CircularGraph.prototype.getRandomRange = function(min, max){
-                    return Math.random() * (max - min) + min;
-               }
+         var color = ['#f2503f','#ea0859','#404F70'];
 
-               var graph = new CircularGraph();
-               graph.init();
-               window.setInterval(function(){
-                   graph.changeArc();
-               }, 2000);
+         var svg=d3.select(id)
+                 .append("svg")
+                 .attr({
+                     width:w,
+                     height:h,
+                     class:'shadow'
+                 }).append('g')
+                 .attr({
+                     transform:'translate('+w/2+','+h/2+')'
+                 });
 
-   
- });
+         createGradient(svg,'gradient',color[0],color[1]);
+
+         var arc=d3.svg.arc()
+                 .innerRadius(innerRadius)
+                 .outerRadius(outerRadius)
+                 .startAngle(0)
+                 .endAngle(2*Math.PI);
+
+         var arcLine=d3.svg.arc()
+                 .innerRadius(innerRadius)
+                 .outerRadius(outerRadius)
+                 .startAngle(0);
+                 svg.append('image').attr({
+                   'xlink:href': 'http://www.iconpng.com/png/beautiful_flat_color/computer.png',
+                   width:20,
+                   height:20,
+                   transform:'translate(0,0)'
+                 });      
+
+         var pathBackground=svg.append('path')
+
+                 .attr({
+                     d:arc
+                 })
+                 .style({
+                     fill:color[2]
+                 });
+
+
+         var pathChart=svg.append('path')
+                 .datum({endAngle:0})
+                 .attr({
+                     d:arcLine
+                 })
+                 .style({
+                     fill:'url(#gradient)'
+                 });
+
+         var middleCount=svg.append('text')
+                 .text(function(d){
+                     return d;
+                 })
+
+                 .attr({
+                     class:'middleText',
+                     'text-anchor':'middle',
+                     dy:30,
+                     dx:-15
+                 })
+                 .style({
+                     fill:color[1],
+                     'font-size':'90px'
+
+                 });
+             svg.append('text')
+                 .text('%')
+                 .attr({
+                     class:'percent',
+                     'text-anchor':'middle',
+                     dx:50,
+                     dy:-5
+
+                 })
+                 .style({
+                     fill:color[1],
+                     'font-size':'40px'
+
+                 });
+
+
+         var arcTween=function(transition, newAngle) {
+             transition.attrTween("d", function (d) {
+                 var interpolate = d3.interpolate(d.endAngle, newAngle);
+                 var interpolateCount = d3.interpolate(0, percent);
+                 return function (t) {
+                     d.endAngle = interpolate(t);
+                     middleCount.text(Math.floor(interpolateCount(t)));
+                     return arcLine(d);
+                 };
+             });
+         };
+
+
+         var animate=function(){
+             pathChart.transition()
+                     .duration(750)
+                     .ease('cubic')
+                     .call(arcTween,((2*Math.PI))*ratio);
+
+
+         };
+
+
+
+
+         setTimeout(animate,0);
+       }
+
+   createChart('#chart',12);
+   createChart('#chart1',85);
+
+       
+
+
 </script>
