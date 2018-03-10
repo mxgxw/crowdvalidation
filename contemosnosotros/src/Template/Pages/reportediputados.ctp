@@ -53,6 +53,10 @@
 		    color: #666;
 		    margin: 6px auto !important;
 		}
+		.diputadoChart{
+
+			
+		}
 
 
 	</style>
