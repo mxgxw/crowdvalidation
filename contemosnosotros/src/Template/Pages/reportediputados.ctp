@@ -42,9 +42,47 @@
 		<!-- <h1>Reporte de diputados</h1> -->
 		<div class="widget">
 		    <div class="header">Reporte de diputados</div>
-		    <div id="chart" class="chart-container" ></div>
-		    <div id="chart1" class="chart-container"></div>
-		    <div id="chart2" class="chart-container"></div>
+
+		    <div class="resultadoDiputado">
+
+		    	<!-- ****aqui | agregar numero de diputado ***** -->
+		    	<div id="chart" class="chart-container" ></div> 
+		    	<h3 id="name27" class="NameDiputado">Rene Portillo Cuadra</h3>
+		    	<h4 id="votos27" class="VotosDiputado">1987 Votos</h4>
+		    	<h2 id="porc27" class="porcDiputado">77<span>%</span></h2>
+		    	<p class="textCoincidencia">Veracidad</p>
+		    	<hr>
+		    	<h3 id="ActasDiponibles27">Actas Disponibles: <strong>1580</strong></h3>
+		    	<div id="chartDiponible27"></div>
+		    	<h4 id="Procesadas27" class="Procesadas">60.35% Procesadas</h4>
+
+		    </div>
+		    <div class="resultadoDiputado">
+		    	<div id="chart1" class="chart-container"></div>
+
+		    	<h3 id="name33" class="NameDiputado">Rene Portillo Cuadra</h3>
+		    	<h4 id="votos33" class="VotosDiputado">1987 Votos</h4>
+		    	<h2 id="porc33" class="porcDiputado">77<span>%</span></h2>
+		    	<p class="textCoincidencia">Veracidad</p>
+		    	<hr>
+		    	<h3 id="ActasDiponibles33">Actas Disponibles: <strong>1580</strong></h3>
+		    	<div id="chartDiponible33"></div>
+		    	<h4 id="Procesadas33" class="Procesadas">60.35% Procesadas</h4>
+		    </div>
+		    <div class="resultadoDiputado">
+		    	<div id="chart2" class="chart-container"></div>
+
+		    	<h3 id="name100" class="NameDiputado">Rene Portillo Cuadra</h3>
+		    	<h4 id="votos100" class="VotosDiputado">1987 Votos</h4>
+		    	<h2 id="porc100" class="porcDiputado">77<span>%</span></h2>
+		    	<p class="textCoincidencia">Veracidad</p>
+		    	<hr>
+		    	<h3 id="ActasDiponibles100">Actas Disponibles: <strong>1580</strong></h3>
+		    	<div id="chartDiponible100"></div>
+		    	<h4 id="Procesadas100" class="Procesadas">60.35% Procesadas</h4>
+		    </div>
+		    
+		    
 		</div>
 
 	</div> 
