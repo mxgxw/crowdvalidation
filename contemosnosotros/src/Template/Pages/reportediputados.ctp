@@ -14,7 +14,7 @@
 		}
 
 		.header{
-		    background-color: #29384D;
+		    background-color: #fff;
 		    height:40px;
 		    color:#929DAF;
 		    text-align: center;
@@ -58,7 +58,7 @@
  $( document ).ready(function() {	
    $( ".reportediputados" ).addClass( "active" );
 
-       var createGradient=function(svg,id,color1,color2){
+       var createGradient=function(svg,id,color1,color2,color2){
 
            var defs = svg.append("svg:defs")
 
@@ -71,13 +71,18 @@
                    .attr("spreadMethod", "pad");
 
            red_gradient.append("svg:stop")
-                   .attr("offset", "50%")
+                   .attr("offset", "33%")
                    .attr("stop-color", color1)
                    .attr("stop-opacity", 1);
 
            red_gradient.append("svg:stop")
-                   .attr("offset", "100%")
+                   .attr("offset", "66%")
                    .attr("stop-color", color2)
+                   .attr("stop-opacity", 1);
+
+           red_gradient.append("svg:stop")
+                   .attr("offset", "100%")
+                   .attr("stop-color", color3)
                    .attr("stop-opacity", 1);
        };
 
@@ -138,7 +143,7 @@
                      d:arc
                  })
                  .style({
-                     fill:'#c5c5c5'
+                     fill:'#eee'
                  });
 
 
