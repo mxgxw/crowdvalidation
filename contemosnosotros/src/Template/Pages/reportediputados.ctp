@@ -63,7 +63,7 @@
 
 	</style>
 	<div class="col-sm-12" >      
-		<!-- <h1>Reporte de diputados</h1> -->
+		<h1>LO ESTOY TRABAJANDO NO ME CRITIQUEN </h1>
 		<div class="widget">
 		    <div class="header">Reporte de diputados</div>
 
