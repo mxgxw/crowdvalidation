@@ -6,7 +6,7 @@
 		    margin: 0 auto;
 		    width:100%;
 		    margin-top:50px;
-		    background-color: #222D3A;
+		    background-color: #fff;
 		    border-radius: 5px;
 		    box-shadow: 0px 0px 1px 0px #06060d;
 		    text-align: center;
@@ -14,7 +14,7 @@
 		}
 
 		.header{
-		    background-color: #fff;
+		    background-color: #29384D;
 		    height:40px;
 		    color:#929DAF;
 		    text-align: center;
