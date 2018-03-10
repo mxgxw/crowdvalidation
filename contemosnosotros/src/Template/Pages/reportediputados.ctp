@@ -115,7 +115,7 @@
                  .startAngle(0)
                  .endAngle(2*Math.PI);
 
-        var baseUrl = document.location.origin;
+        var baseUrl = window.location.pathname;
 
          var arcLine=d3.svg.arc()
                  .innerRadius(innerRadius)
