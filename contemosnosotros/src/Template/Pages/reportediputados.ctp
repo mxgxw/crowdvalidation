@@ -161,7 +161,7 @@
          var w=226,h=226;
 
          var outerRadius=(w/2)-10;
-         var innerRadius=180;
+         var innerRadius=80;
 
          var color = ['#0070bc','#004eab','#001e79'];
 
