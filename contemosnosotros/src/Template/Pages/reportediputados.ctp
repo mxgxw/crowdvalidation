@@ -4,7 +4,7 @@
 		
 		.widget {
 		    margin: 0 auto;
-		    width:1200px;
+		    width:100%;
 		    margin-top:50px;
 		    background-color: #222D3A;
 		    border-radius: 5px;
@@ -37,11 +37,10 @@
 		}
 
 	</style>
-	<div class="col-sm-10 col-sm-offset-1">      
-		<h1>Reporte de diputados</h1>
-		
+	<div class="col-sm-12" >      
+		<!-- <h1>Reporte de diputados</h1> -->
 		<div class="widget">
-		    <div class="header">Progress Status</div>
+		    <div class="header">Reporte de diputados</div>
 		    <div id="chart" class="chart-container" ></div>
 		    <div id="chart1" class="chart-container"></div>
 		</div>
@@ -80,7 +79,8 @@
                    .attr("stop-opacity", 1);
        };
 
-       function createChart(id,percent){
+
+       function createChart(id,percent,id_diputado){
 
 
          var ratio=percent/100;
@@ -115,12 +115,15 @@
                  .startAngle(0)
                  .endAngle(2*Math.PI);
 
+        var baseUrl = document.location.origin;
+
          var arcLine=d3.svg.arc()
                  .innerRadius(innerRadius)
                  .outerRadius(outerRadius)
                  .startAngle(0);
                  svg.append('image').attr({
-                   'xlink:href': 'http://www.iconpng.com/png/beautiful_flat_color/computer.png',
+                   'xlink:href': baseUrl +id_diputado+'.png',
+                   // 'xlink:href': 'https://contemosnosotros.org/staging/img/'+id_diputado+'.png',
                    width:20,
                    height:20,
                    transform:'translate(0,0)'
@@ -205,8 +208,8 @@
          setTimeout(animate,0);
        }
 
-   createChart('#chart',12);
-   createChart('#chart1',85);
+   createChart('#chart',12,27);
+   createChart('#chart1',85,33);
 
 }); 
 
