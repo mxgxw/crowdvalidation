@@ -55,7 +55,9 @@
 		}
 		.diputadoChart{
 
-			
+			max-width: 225px;
+			display: inline-block;
+			margin: 10px;
 		}
 
 
@@ -156,7 +158,7 @@
                  .value(function(d){return d})
                  .sort(null);
 
-         var w=300,h=300;
+         var w=226,h=226;
 
          var outerRadius=(w/2)-10;
          var innerRadius=110;
@@ -263,7 +265,7 @@
 
          var animate=function(){
              pathChart.transition()
-                     .duration(750)
+                     .duration(1500)
                      .ease('cubic')
                      .call(arcTween,((2*Math.PI))*ratio);
 
