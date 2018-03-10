@@ -45,7 +45,7 @@
    $('#marcasvotos').DataTable( {
         "ajax": 'https://contemosnosotros.org/api/votopreferenteactas'
     })
-	 );
+	 
    
  });
 </script>
