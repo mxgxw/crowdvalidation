@@ -213,7 +213,7 @@
 
    createChart('#chart',12,27);
    createChart('#chart1',85,33);
-   createChart('#chart2',25,33);
+   createChart('#chart2',25,100);
 
 }); 
 
