@@ -15,7 +15,7 @@
  $( document ).ready(function() {	
    $( ".reportediputados" ).addClass( "active" );
 
-   hart.defaults.RoundedDoughnut = Chart.helpers.clone(Chart.defaults.doughnut);
+   Chart.defaults.RoundedDoughnut = Chart.helpers.clone(Chart.defaults.doughnut);
            Chart.controllers.RoundedDoughnut = Chart.controllers.doughnut.extend({
                draw: function (ease) {
                		var ctx = this.chart.chart.ctx;
