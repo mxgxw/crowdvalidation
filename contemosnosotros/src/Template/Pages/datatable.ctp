@@ -43,6 +43,7 @@
    $( ".datatable" ).addClass( "active" );
    
    $('#marcasvotos').DataTable( {
+   	responsive: true,
         "ajax": 'https://contemosnosotros.org/api/votopreferenteactas'
     })
 	 
