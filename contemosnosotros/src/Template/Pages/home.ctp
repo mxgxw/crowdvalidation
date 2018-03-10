@@ -24,6 +24,9 @@
           <div class="text-center"> 
 			      <button class="btn btn-primary btn-lg" id="btnSend">Enviar Acta</button> 
           </div>
+		   <div class="text-center"> 
+			     <p> <?= $this->Html->link('Ver resultados...', '/pages/datatable'); ?></p>
+          </div>
           <div class="text-center">
             <div id="#alert-box" class="alert alert-success alert-dismissible fade show" role="alert" style="display: none;">
               Acta ingresada <strong>correctamente. </strong>

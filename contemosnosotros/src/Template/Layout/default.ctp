@@ -78,6 +78,9 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
                   <li class="faq">
                   <?= $this->Html->link('FAQ', '/pages/faq'); ?>
                   </li>
+                  <li class="datatable">
+				  <?= $this->Html->link('Ver resultados...', '/pages/datatable'); ?>
+                  </li>
                   <!--
                   <li class="agradecimientos">
                   <?= $this->Html->link('Agradecimientos', '/pages/agradecimientos'); ?>
