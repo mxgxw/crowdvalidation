@@ -109,7 +109,7 @@
                      transform:'translate('+w/2+','+h/2+')'
                  });
 
-         createGradient(svg,'gradient',color[0],color[1]);
+         createGradient(svg,'gradient',color[0],color[1],color[2]);
 
          var arc=d3.svg.arc()
                  .innerRadius(innerRadius)
