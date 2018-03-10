@@ -114,8 +114,8 @@
 
 
 </div>
-<script type="text/javascript" src="d3.min.js"></script>        
-<!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.4.1/d3.min.js"></script>         -->
+<!-- <script type="text/javascript" src="d3.min.js"></script>         -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.4.1/d3.min.js"></script>        
 
 <script>
  $( document ).ready(function() { 
