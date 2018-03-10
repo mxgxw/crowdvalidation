@@ -37,7 +37,23 @@
 		    filter: drop-shadow( 0px 3px 3px rgba(0,0,0,.5) );
 		}
 
-		.
+		
+		h3.NameDiputado {
+	      font-size: 14px;
+	      margin: 10px auto 0px;
+		    color: #666;
+	      /* display: block; */
+	      /* width: 100%; */
+		}
+
+
+		h4.VotosDiputado {
+		    font-size: 18px;
+		    font-weight: bold;
+		    color: #666;
+		    margin: 6px auto !important;
+		}
+
 
 	</style>
 	<div class="col-sm-12" >      
