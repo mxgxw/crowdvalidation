@@ -161,7 +161,7 @@
          var w=226,h=226;
 
          var outerRadius=(w/2)-10;
-         var innerRadius=110;
+         var innerRadius=180;
 
          var color = ['#0070bc','#004eab','#001e79'];
 
@@ -194,9 +194,9 @@
                  svg.append('image').attr({
                    'xlink:href': baseUrl + id_diputado+'.png',
                    // 'xlink:href': 'https://contemosnosotros.org/staging/img/'+id_diputado+'.png',
-                   // width:20,
-                   // height:20,
-                   transform:'translate(-150,-150)'
+                   width:w,
+                   height:h,
+                   transform:'translate('+w/2+','+h/2+')'
                  });      
 
          var pathBackground=svg.append('path')
