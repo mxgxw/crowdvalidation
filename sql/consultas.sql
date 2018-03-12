@@ -125,6 +125,13 @@ FROM `voto_preferencial` LEFT JOIN `actas_disponibles_diputado` ON
   `voto_preferencial`.`diputado_id` = `actas_disponibles_diputado`.`diputado`
   LEFT JOIN `actas_procesadas_diputado` ON 
   `voto_preferencial`.`diputado_id` = `actas_procesadas_diputado`.`diputado`
+WHERE `actas_procesadas_diputado`.`actas_procesadas`100
+
+CREATE VIEW `ultimas_digitaciones` AS
+SELECT *
+FROM `digitaciones`
+ORDER BY `fecha` DESC
+LIMIT 100
 
 -- Actas procesadas para diputado.
 CREATE VIEW `actas_procesadas_diputado` AS
@@ -148,6 +155,22 @@ GROUP BY
 
 -- Anonimizando origenes
 UPDATE `digitaciones` SET `origin`=SHA1(CONCAT('OitdZei3Rm5EQ0MpifPm',`origin`)) WHERE 1
+
+-- IDs de digitaciones validadas
+CREATE VIEW `actas_validadas` AS
+SELECT
+  hash_table.id
+FROM
+  `mejores_validadas` INNER JOIN `hash_table` ON
+    `mejores_validadas`.`acta_id` = `hash_table`.`acta` AND
+    `mejores_validadas`.`diputado` = `hash_table`.`diputado`
+
+SELECT * FROM `hash_table`
+WHERE `hash_table`.`id` NOT IN (SELECT `id` FROM `actas_validadas`)
+LIMIT 500
+
+-- Actualiza las listas ya validadas para sacarlas del pool de Selecciona
+UPDATE `hash_table` SET `completed`=1 WHERE `hash_table`.`id` IN (SELECT `id` FROM `actas_validadas`)
 
 -- Limpieza de valores
 UPDATE `hash_table` SET `hashvalue`=NULL,`valid_until`=NULL,`ilegible`=0 WHERE 1

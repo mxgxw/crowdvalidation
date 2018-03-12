@@ -12,9 +12,9 @@
                 <th>ID partido</th>
                 <th>Partido</th>
                 <th>Diputado</th>
-				<th>Marcas</th>
-				<th>Disponibles</th>
-				<th>Procesadas</th>
+                <th>Marcas</th>
+                <th>Actas disponibles</th>
+                <th>Actas procesadas</th>
             </tr>
         </thead>
         <tfoot>
@@ -26,8 +26,8 @@
                 <th>Partido</th>
                 <th>Diputado</th>
 				<th>Marcas</th>
-				<th>Disponibles</th>
-				<th>Procesadas</th>
+                <th>Actas disponibles</th>
+                <th>Actas procesadas</th>
             </tr>
         </tfoot>
     </table>
@@ -40,10 +40,26 @@
    $( ".datatable" ).addClass( "active" );
    
    $('#marcasvotos').DataTable( {
-   	responsive: true,
-        "ajax": 'https://contemosnosotros.org/api/votopreferenteactas'
-    })
-	 
+    "responsive": true,
+    "ajax": 'https://contemosnosotros.org/api/votopreferenteactas',
+    "columnDefs": [
+      {
+        "targets": [ 0 ],
+        "visible": false,
+        "searchable": false
+      },
+      {
+        "targets": [ 1 ],
+        "visible": false,
+        "searchable": false
+      },
+      {
+        "targets": [ 3 ],
+        "visible": false,
+        "searchable": false
+      }
+    ]
+    });
    
  });
 </script>
