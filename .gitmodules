@@ -1,0 +1,3 @@
+[submodule "contemosnosotros-ui"]
+	path = contemosnosotros-ui
+	url = git@github.com:guillegr123/contemosnosotros-ui.git
