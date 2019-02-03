@@ -3,6 +3,7 @@ echo Pulling last updates from FrontEnd Repo...
 cd ..
 cd contemosnosotros-ui
 git checkout master
+git checkout package-lock.json
 git pull
 echo Installing Dependencies
 npm i
