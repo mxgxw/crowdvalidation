@@ -127,7 +127,7 @@ class ValidaController extends AppController {
                     $digitacion->diputado = $data->diputado;
                     $digitacion->fecha = date("Y-m-d H:i:s");
                     $digitacion->digitado = $votos;
-                    $digitacion->origin = sha1('OitdZei3Rm5EQ0MpifPm'.$_SERVER['REMOTE_ADDR']);
+                    $digitacion->origin = sha1(env('Security.salt').$_SERVER['REMOTE_ADDR']);
 
 	            if($digitaciones->save($digitacion)) {
                         //$data->hashvalue = null;
