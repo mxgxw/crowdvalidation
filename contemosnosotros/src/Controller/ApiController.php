@@ -26,7 +26,7 @@ class ApiController extends AppController {
         $response = array('message'=>'God\'s in His heaven, all\'s right with the world.');
 	echo json_encode($response);
 	exit();
-    };
+    }
 
     // Generates a token for each request
     public function index() {
