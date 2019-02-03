@@ -20,6 +20,14 @@ class ApiController extends AppController {
         $obj->procesadas
       );
     }
+
+    public function test() {
+        header("Content-type: application/json");
+        $response = array('message'=>'God\'s in His heaven, all\'s right with the world.');
+	echo json_encode($response);
+	exit();
+    }
+
     // Generates a token for each request
     public function index() {
         header("Content-type: application/json");
