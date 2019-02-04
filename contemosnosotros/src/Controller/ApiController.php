@@ -98,7 +98,7 @@ class ApiController extends AppController {
         // Token Generation        
         $expireDate = date("Y-m-d H:i:s",time()+60*5);
         $nextImg->valid_until = $expireDate;
-        $nextImg->hashvalue = sha1($nextImg->id.$expireDate.$nextImg->diputado);
+        $nextImg->hashvalue = sha1($nextImg->id.$expireDate.$nextImg->partido_id);
 
         // Token delivery
         if($hashtable->save($nextImg)) {
@@ -128,7 +128,7 @@ class ApiController extends AppController {
 
                 if($votos>=0 && $votos<=500) {
                     $digitacion->acta_id = $data->acta;
-                    $digitacion->diputado = $data->diputado;
+                    $digitacion->partido_id = $data->partido_id;
                     $digitacion->fecha = date("Y-m-d H:i:s");
                     $digitacion->digitado = $votos;
                     $digitacion->origin = sha1(env('Security.salt').$_SERVER['REMOTE_ADDR']);
@@ -160,6 +160,12 @@ class ApiController extends AppController {
         exit();
     }
 
+    public function index() {
+        header("Content-type: application/json");
+        echo json_encode(array('data'=>''));
+        exit();
+    }
+/*
     // Generates a token for each request
     public function index() {
         header("Content-type: application/json");
@@ -196,4 +202,5 @@ class ApiController extends AppController {
 
         exit(); // TODO: Remove
     }
+*/
 }
